@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service Deliverer {
+	rpc MultiplyNumbers (MultiplyRequest) returns (MultiplyResponse) {}
+}
+
+message MultiplyRequest {
+	int32 a = 1;
+	int32 b = 2;
+}
+
+message MultiplyResponse {
+	int32 result = 1;
+}
