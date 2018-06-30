@@ -10,8 +10,8 @@ _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
 class Deliverer(simple_pb2_grpc.DelivererServicer):
 	
-	def MultiplyNumbers(self, request, context):
-		return simple_pb2.MultiplyResponse(result=request.a * request.b)
+	def SumNumbers(self, request, context):
+		return simple_pb2.SumResponse(result=request.a * request.b)
 
 def serve():
 	server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))

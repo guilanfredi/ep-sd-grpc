@@ -2,19 +2,19 @@ syntax = "proto3";
 
 service Deliverer {
 	//Multiplicar dois valores Int
-	rpc MultiplyNumbers (MultiplyRequest) returns (MultiplyResponse) {}
+	rpc SumNumbers (SumRequest) returns (SumResponse) {}
 	
 	//1)
 	//operação sem parâmetros e sem valor de retorno
-	rpc MultiplyOnServer (Empty) returns (Empty) {}
+	rpc SumOnServer (Empty) returns (Empty) {}
 
 	//2)
 	//operação com um long de parâmetro e retorna um long
-	rpc MultiplyLong(MultiplyLongRequest) returns (MultiplyLongResponse){}
+	rpc SumLong(SumLongRequest) returns (SumLongResponse){}
 
 	//3)
 	//operação com um 8 valores long de parâmetro e retorna um long
-	rpc MultiplyEightLongs(MultiplyEightLongsRequest) returns (MultiplyLongResponse){}
+	rpc SumEightLongs(SumEightLongsRequest) returns (SumLongResponse){}
 
 	//4)
 	//operação com parâmetro string e valor de retorno string
@@ -25,27 +25,27 @@ service Deliverer {
 	//operação com tipo complexo
 }
 
-message MultiplyRequest {
+message SumRequest {
 	int32 a = 1;
 	int32 b = 2;
 }
 
-message MultiplyResponse {
+message SumResponse {
 	int32 result = 1;
 }
 
 message Empty{}
 
-message MultiplyLongRequest {
+message SumLongRequest {
 	int64 a = 1;
 	int64 b = 2;
 }
 
-message MultiplyLongResponse {
+message SumLongResponse {
 	int64 result = 1;
 }
 
-message MultiplyEightLongsRequest {
+message SumEightLongsRequest {
 	int64 a = 1;
 	int64 b = 2;
 	int64 c = 3;

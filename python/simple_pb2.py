@@ -19,28 +19,28 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='simple.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x0csimple.proto\"\'\n\x0fMultiplyRequest\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x05\"\"\n\x10MultiplyResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\x07\n\x05\x45mpty\"+\n\x13MultiplyLongRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\"&\n\x14MultiplyLongResponse\x12\x0e\n\x06result\x18\x01 \x01(\x03\"s\n\x19MultiplyEightLongsRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\x03\x12\t\n\x01\x64\x18\x04 \x01(\x03\x12\t\n\x01\x65\x18\x05 \x01(\x03\x12\t\n\x01\x66\x18\x06 \x01(\x03\x12\t\n\x01g\x18\x07 \x01(\x03\x12\t\n\x01h\x18\x08 \x01(\x03\"\x1a\n\rStringRequest\x12\t\n\x01\x61\x18\x01 \x01(\t\" \n\x0eStringResponse\x12\x0e\n\x06result\x18\x01 \x01(\t2\xa9\x02\n\tDeliverer\x12\x38\n\x0fMultiplyNumbers\x12\x10.MultiplyRequest\x1a\x11.MultiplyResponse\"\x00\x12$\n\x10MultiplyOnServer\x12\x06.Empty\x1a\x06.Empty\"\x00\x12=\n\x0cMultiplyLong\x12\x14.MultiplyLongRequest\x1a\x15.MultiplyLongResponse\"\x00\x12I\n\x12MultiplyEightLongs\x12\x1a.MultiplyEightLongsRequest\x1a\x15.MultiplyLongResponse\"\x00\x12\x32\n\rStringReplace\x12\x0e.StringRequest\x1a\x0f.StringResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0csimple.proto\"\"\n\nSumRequest\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x05\"\x1d\n\x0bSumResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\x07\n\x05\x45mpty\"&\n\x0eSumLongRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\"!\n\x0fSumLongResponse\x12\x0e\n\x06result\x18\x01 \x01(\x03\"n\n\x14SumEightLongsRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\x03\x12\t\n\x01\x64\x18\x04 \x01(\x03\x12\t\n\x01\x65\x18\x05 \x01(\x03\x12\t\n\x01\x66\x18\x06 \x01(\x03\x12\t\n\x01g\x18\x07 \x01(\x03\x12\t\n\x01h\x18\x08 \x01(\x03\"\x1a\n\rStringRequest\x12\t\n\x01\x61\x18\x01 \x01(\t\" \n\x0eStringResponse\x12\x0e\n\x06result\x18\x01 \x01(\t2\xf7\x01\n\tDeliverer\x12)\n\nSumNumbers\x12\x0b.SumRequest\x1a\x0c.SumResponse\"\x00\x12\x1f\n\x0bSumOnServer\x12\x06.Empty\x1a\x06.Empty\"\x00\x12.\n\x07SumLong\x12\x0f.SumLongRequest\x1a\x10.SumLongResponse\"\x00\x12:\n\rSumEightLongs\x12\x15.SumEightLongsRequest\x1a\x10.SumLongResponse\"\x00\x12\x32\n\rStringReplace\x12\x0e.StringRequest\x1a\x0f.StringResponse\"\x00\x62\x06proto3')
 )
 
 
 
 
-_MULTIPLYREQUEST = _descriptor.Descriptor(
-  name='MultiplyRequest',
-  full_name='MultiplyRequest',
+_SUMREQUEST = _descriptor.Descriptor(
+  name='SumRequest',
+  full_name='SumRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='a', full_name='MultiplyRequest.a', index=0,
+      name='a', full_name='SumRequest.a', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='b', full_name='MultiplyRequest.b', index=1,
+      name='b', full_name='SumRequest.b', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -59,19 +59,19 @@ _MULTIPLYREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=16,
-  serialized_end=55,
+  serialized_end=50,
 )
 
 
-_MULTIPLYRESPONSE = _descriptor.Descriptor(
-  name='MultiplyResponse',
-  full_name='MultiplyResponse',
+_SUMRESPONSE = _descriptor.Descriptor(
+  name='SumResponse',
+  full_name='SumResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='MultiplyResponse.result', index=0,
+      name='result', full_name='SumResponse.result', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -89,8 +89,8 @@ _MULTIPLYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=57,
-  serialized_end=91,
+  serialized_start=52,
+  serialized_end=81,
 )
 
 
@@ -113,27 +113,27 @@ _EMPTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=93,
-  serialized_end=100,
+  serialized_start=83,
+  serialized_end=90,
 )
 
 
-_MULTIPLYLONGREQUEST = _descriptor.Descriptor(
-  name='MultiplyLongRequest',
-  full_name='MultiplyLongRequest',
+_SUMLONGREQUEST = _descriptor.Descriptor(
+  name='SumLongRequest',
+  full_name='SumLongRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='a', full_name='MultiplyLongRequest.a', index=0,
+      name='a', full_name='SumLongRequest.a', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='b', full_name='MultiplyLongRequest.b', index=1,
+      name='b', full_name='SumLongRequest.b', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -151,20 +151,20 @@ _MULTIPLYLONGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=102,
-  serialized_end=145,
+  serialized_start=92,
+  serialized_end=130,
 )
 
 
-_MULTIPLYLONGRESPONSE = _descriptor.Descriptor(
-  name='MultiplyLongResponse',
-  full_name='MultiplyLongResponse',
+_SUMLONGRESPONSE = _descriptor.Descriptor(
+  name='SumLongResponse',
+  full_name='SumLongResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='result', full_name='MultiplyLongResponse.result', index=0,
+      name='result', full_name='SumLongResponse.result', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -182,69 +182,69 @@ _MULTIPLYLONGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=147,
-  serialized_end=185,
+  serialized_start=132,
+  serialized_end=165,
 )
 
 
-_MULTIPLYEIGHTLONGSREQUEST = _descriptor.Descriptor(
-  name='MultiplyEightLongsRequest',
-  full_name='MultiplyEightLongsRequest',
+_SUMEIGHTLONGSREQUEST = _descriptor.Descriptor(
+  name='SumEightLongsRequest',
+  full_name='SumEightLongsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='a', full_name='MultiplyEightLongsRequest.a', index=0,
+      name='a', full_name='SumEightLongsRequest.a', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='b', full_name='MultiplyEightLongsRequest.b', index=1,
+      name='b', full_name='SumEightLongsRequest.b', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='c', full_name='MultiplyEightLongsRequest.c', index=2,
+      name='c', full_name='SumEightLongsRequest.c', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='d', full_name='MultiplyEightLongsRequest.d', index=3,
+      name='d', full_name='SumEightLongsRequest.d', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='e', full_name='MultiplyEightLongsRequest.e', index=4,
+      name='e', full_name='SumEightLongsRequest.e', index=4,
       number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='f', full_name='MultiplyEightLongsRequest.f', index=5,
+      name='f', full_name='SumEightLongsRequest.f', index=5,
       number=6, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='g', full_name='MultiplyEightLongsRequest.g', index=6,
+      name='g', full_name='SumEightLongsRequest.g', index=6,
       number=7, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='h', full_name='MultiplyEightLongsRequest.h', index=7,
+      name='h', full_name='SumEightLongsRequest.h', index=7,
       number=8, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -262,8 +262,8 @@ _MULTIPLYEIGHTLONGSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=187,
-  serialized_end=302,
+  serialized_start=167,
+  serialized_end=277,
 )
 
 
@@ -293,8 +293,8 @@ _STRINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=304,
-  serialized_end=330,
+  serialized_start=279,
+  serialized_end=305,
 )
 
 
@@ -324,33 +324,33 @@ _STRINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=332,
-  serialized_end=364,
+  serialized_start=307,
+  serialized_end=339,
 )
 
-DESCRIPTOR.message_types_by_name['MultiplyRequest'] = _MULTIPLYREQUEST
-DESCRIPTOR.message_types_by_name['MultiplyResponse'] = _MULTIPLYRESPONSE
+DESCRIPTOR.message_types_by_name['SumRequest'] = _SUMREQUEST
+DESCRIPTOR.message_types_by_name['SumResponse'] = _SUMRESPONSE
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
-DESCRIPTOR.message_types_by_name['MultiplyLongRequest'] = _MULTIPLYLONGREQUEST
-DESCRIPTOR.message_types_by_name['MultiplyLongResponse'] = _MULTIPLYLONGRESPONSE
-DESCRIPTOR.message_types_by_name['MultiplyEightLongsRequest'] = _MULTIPLYEIGHTLONGSREQUEST
+DESCRIPTOR.message_types_by_name['SumLongRequest'] = _SUMLONGREQUEST
+DESCRIPTOR.message_types_by_name['SumLongResponse'] = _SUMLONGRESPONSE
+DESCRIPTOR.message_types_by_name['SumEightLongsRequest'] = _SUMEIGHTLONGSREQUEST
 DESCRIPTOR.message_types_by_name['StringRequest'] = _STRINGREQUEST
 DESCRIPTOR.message_types_by_name['StringResponse'] = _STRINGRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-MultiplyRequest = _reflection.GeneratedProtocolMessageType('MultiplyRequest', (_message.Message,), dict(
-  DESCRIPTOR = _MULTIPLYREQUEST,
+SumRequest = _reflection.GeneratedProtocolMessageType('SumRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SUMREQUEST,
   __module__ = 'simple_pb2'
-  # @@protoc_insertion_point(class_scope:MultiplyRequest)
+  # @@protoc_insertion_point(class_scope:SumRequest)
   ))
-_sym_db.RegisterMessage(MultiplyRequest)
+_sym_db.RegisterMessage(SumRequest)
 
-MultiplyResponse = _reflection.GeneratedProtocolMessageType('MultiplyResponse', (_message.Message,), dict(
-  DESCRIPTOR = _MULTIPLYRESPONSE,
+SumResponse = _reflection.GeneratedProtocolMessageType('SumResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SUMRESPONSE,
   __module__ = 'simple_pb2'
-  # @@protoc_insertion_point(class_scope:MultiplyResponse)
+  # @@protoc_insertion_point(class_scope:SumResponse)
   ))
-_sym_db.RegisterMessage(MultiplyResponse)
+_sym_db.RegisterMessage(SumResponse)
 
 Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), dict(
   DESCRIPTOR = _EMPTY,
@@ -359,26 +359,26 @@ Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), d
   ))
 _sym_db.RegisterMessage(Empty)
 
-MultiplyLongRequest = _reflection.GeneratedProtocolMessageType('MultiplyLongRequest', (_message.Message,), dict(
-  DESCRIPTOR = _MULTIPLYLONGREQUEST,
+SumLongRequest = _reflection.GeneratedProtocolMessageType('SumLongRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SUMLONGREQUEST,
   __module__ = 'simple_pb2'
-  # @@protoc_insertion_point(class_scope:MultiplyLongRequest)
+  # @@protoc_insertion_point(class_scope:SumLongRequest)
   ))
-_sym_db.RegisterMessage(MultiplyLongRequest)
+_sym_db.RegisterMessage(SumLongRequest)
 
-MultiplyLongResponse = _reflection.GeneratedProtocolMessageType('MultiplyLongResponse', (_message.Message,), dict(
-  DESCRIPTOR = _MULTIPLYLONGRESPONSE,
+SumLongResponse = _reflection.GeneratedProtocolMessageType('SumLongResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SUMLONGRESPONSE,
   __module__ = 'simple_pb2'
-  # @@protoc_insertion_point(class_scope:MultiplyLongResponse)
+  # @@protoc_insertion_point(class_scope:SumLongResponse)
   ))
-_sym_db.RegisterMessage(MultiplyLongResponse)
+_sym_db.RegisterMessage(SumLongResponse)
 
-MultiplyEightLongsRequest = _reflection.GeneratedProtocolMessageType('MultiplyEightLongsRequest', (_message.Message,), dict(
-  DESCRIPTOR = _MULTIPLYEIGHTLONGSREQUEST,
+SumEightLongsRequest = _reflection.GeneratedProtocolMessageType('SumEightLongsRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SUMEIGHTLONGSREQUEST,
   __module__ = 'simple_pb2'
-  # @@protoc_insertion_point(class_scope:MultiplyEightLongsRequest)
+  # @@protoc_insertion_point(class_scope:SumEightLongsRequest)
   ))
-_sym_db.RegisterMessage(MultiplyEightLongsRequest)
+_sym_db.RegisterMessage(SumEightLongsRequest)
 
 StringRequest = _reflection.GeneratedProtocolMessageType('StringRequest', (_message.Message,), dict(
   DESCRIPTOR = _STRINGREQUEST,
@@ -402,21 +402,21 @@ _DELIVERER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=367,
-  serialized_end=664,
+  serialized_start=342,
+  serialized_end=589,
   methods=[
   _descriptor.MethodDescriptor(
-    name='MultiplyNumbers',
-    full_name='Deliverer.MultiplyNumbers',
+    name='SumNumbers',
+    full_name='Deliverer.SumNumbers',
     index=0,
     containing_service=None,
-    input_type=_MULTIPLYREQUEST,
-    output_type=_MULTIPLYRESPONSE,
+    input_type=_SUMREQUEST,
+    output_type=_SUMRESPONSE,
     options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='MultiplyOnServer',
-    full_name='Deliverer.MultiplyOnServer',
+    name='SumOnServer',
+    full_name='Deliverer.SumOnServer',
     index=1,
     containing_service=None,
     input_type=_EMPTY,
@@ -424,21 +424,21 @@ _DELIVERER = _descriptor.ServiceDescriptor(
     options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='MultiplyLong',
-    full_name='Deliverer.MultiplyLong',
+    name='SumLong',
+    full_name='Deliverer.SumLong',
     index=2,
     containing_service=None,
-    input_type=_MULTIPLYLONGREQUEST,
-    output_type=_MULTIPLYLONGRESPONSE,
+    input_type=_SUMLONGREQUEST,
+    output_type=_SUMLONGRESPONSE,
     options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='MultiplyEightLongs',
-    full_name='Deliverer.MultiplyEightLongs',
+    name='SumEightLongs',
+    full_name='Deliverer.SumEightLongs',
     index=3,
     containing_service=None,
-    input_type=_MULTIPLYEIGHTLONGSREQUEST,
-    output_type=_MULTIPLYLONGRESPONSE,
+    input_type=_SUMEIGHTLONGSREQUEST,
+    output_type=_SUMLONGRESPONSE,
     options=None,
   ),
   _descriptor.MethodDescriptor(

@@ -14,25 +14,25 @@ class DelivererStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.MultiplyNumbers = channel.unary_unary(
-        '/Deliverer/MultiplyNumbers',
-        request_serializer=simple__pb2.MultiplyRequest.SerializeToString,
-        response_deserializer=simple__pb2.MultiplyResponse.FromString,
+    self.SumNumbers = channel.unary_unary(
+        '/Deliverer/SumNumbers',
+        request_serializer=simple__pb2.SumRequest.SerializeToString,
+        response_deserializer=simple__pb2.SumResponse.FromString,
         )
-    self.MultiplyOnServer = channel.unary_unary(
-        '/Deliverer/MultiplyOnServer',
+    self.SumOnServer = channel.unary_unary(
+        '/Deliverer/SumOnServer',
         request_serializer=simple__pb2.Empty.SerializeToString,
         response_deserializer=simple__pb2.Empty.FromString,
         )
-    self.MultiplyLong = channel.unary_unary(
-        '/Deliverer/MultiplyLong',
-        request_serializer=simple__pb2.MultiplyLongRequest.SerializeToString,
-        response_deserializer=simple__pb2.MultiplyLongResponse.FromString,
+    self.SumLong = channel.unary_unary(
+        '/Deliverer/SumLong',
+        request_serializer=simple__pb2.SumLongRequest.SerializeToString,
+        response_deserializer=simple__pb2.SumLongResponse.FromString,
         )
-    self.MultiplyEightLongs = channel.unary_unary(
-        '/Deliverer/MultiplyEightLongs',
-        request_serializer=simple__pb2.MultiplyEightLongsRequest.SerializeToString,
-        response_deserializer=simple__pb2.MultiplyLongResponse.FromString,
+    self.SumEightLongs = channel.unary_unary(
+        '/Deliverer/SumEightLongs',
+        request_serializer=simple__pb2.SumEightLongsRequest.SerializeToString,
+        response_deserializer=simple__pb2.SumLongResponse.FromString,
         )
     self.StringReplace = channel.unary_unary(
         '/Deliverer/StringReplace',
@@ -45,14 +45,14 @@ class DelivererServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def MultiplyNumbers(self, request, context):
+  def SumNumbers(self, request, context):
     """Multiplicar dois valores Int
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def MultiplyOnServer(self, request, context):
+  def SumOnServer(self, request, context):
     """1)
     operação sem parâmetros e sem valor de retorno
     """
@@ -60,7 +60,7 @@ class DelivererServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def MultiplyLong(self, request, context):
+  def SumLong(self, request, context):
     """2)
     operação com um long de parâmetro e retorna um long
     """
@@ -68,7 +68,7 @@ class DelivererServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def MultiplyEightLongs(self, request, context):
+  def SumEightLongs(self, request, context):
     """3)
     operação com um 8 valores long de parâmetro e retorna um long
     """
@@ -87,25 +87,25 @@ class DelivererServicer(object):
 
 def add_DelivererServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'MultiplyNumbers': grpc.unary_unary_rpc_method_handler(
-          servicer.MultiplyNumbers,
-          request_deserializer=simple__pb2.MultiplyRequest.FromString,
-          response_serializer=simple__pb2.MultiplyResponse.SerializeToString,
+      'SumNumbers': grpc.unary_unary_rpc_method_handler(
+          servicer.SumNumbers,
+          request_deserializer=simple__pb2.SumRequest.FromString,
+          response_serializer=simple__pb2.SumResponse.SerializeToString,
       ),
-      'MultiplyOnServer': grpc.unary_unary_rpc_method_handler(
-          servicer.MultiplyOnServer,
+      'SumOnServer': grpc.unary_unary_rpc_method_handler(
+          servicer.SumOnServer,
           request_deserializer=simple__pb2.Empty.FromString,
           response_serializer=simple__pb2.Empty.SerializeToString,
       ),
-      'MultiplyLong': grpc.unary_unary_rpc_method_handler(
-          servicer.MultiplyLong,
-          request_deserializer=simple__pb2.MultiplyLongRequest.FromString,
-          response_serializer=simple__pb2.MultiplyLongResponse.SerializeToString,
+      'SumLong': grpc.unary_unary_rpc_method_handler(
+          servicer.SumLong,
+          request_deserializer=simple__pb2.SumLongRequest.FromString,
+          response_serializer=simple__pb2.SumLongResponse.SerializeToString,
       ),
-      'MultiplyEightLongs': grpc.unary_unary_rpc_method_handler(
-          servicer.MultiplyEightLongs,
-          request_deserializer=simple__pb2.MultiplyEightLongsRequest.FromString,
-          response_serializer=simple__pb2.MultiplyLongResponse.SerializeToString,
+      'SumEightLongs': grpc.unary_unary_rpc_method_handler(
+          servicer.SumEightLongs,
+          request_deserializer=simple__pb2.SumEightLongsRequest.FromString,
+          response_serializer=simple__pb2.SumLongResponse.SerializeToString,
       ),
       'StringReplace': grpc.unary_unary_rpc_method_handler(
           servicer.StringReplace,
