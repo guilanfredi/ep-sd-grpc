@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='simple.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x0csimple.proto\"\'\n\x0fMultiplyRequest\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x05\"\"\n\x10MultiplyResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\x32\x45\n\tDeliverer\x12\x38\n\x0fMultiplyNumbers\x12\x10.MultiplyRequest\x1a\x11.MultiplyResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0csimple.proto\"\'\n\x0fMultiplyRequest\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x05\"\"\n\x10MultiplyResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\x07\n\x05\x45mpty\"+\n\x13MultiplyLongRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\"&\n\x14MultiplyLongResponse\x12\x0e\n\x06result\x18\x01 \x01(\x03\"s\n\x19MultiplyEightLongsRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\x03\x12\t\n\x01\x64\x18\x04 \x01(\x03\x12\t\n\x01\x65\x18\x05 \x01(\x03\x12\t\n\x01\x66\x18\x06 \x01(\x03\x12\t\n\x01g\x18\x07 \x01(\x03\x12\t\n\x01h\x18\x08 \x01(\x03\"\x1a\n\rStringRequest\x12\t\n\x01\x61\x18\x01 \x01(\t\" \n\x0eStringResponse\x12\x0e\n\x06result\x18\x01 \x01(\t2\xa9\x02\n\tDeliverer\x12\x38\n\x0fMultiplyNumbers\x12\x10.MultiplyRequest\x1a\x11.MultiplyResponse\"\x00\x12$\n\x10MultiplyOnServer\x12\x06.Empty\x1a\x06.Empty\"\x00\x12=\n\x0cMultiplyLong\x12\x14.MultiplyLongRequest\x1a\x15.MultiplyLongResponse\"\x00\x12I\n\x12MultiplyEightLongs\x12\x1a.MultiplyEightLongsRequest\x1a\x15.MultiplyLongResponse\"\x00\x12\x32\n\rStringReplace\x12\x0e.StringRequest\x1a\x0f.StringResponse\"\x00\x62\x06proto3')
 )
 
 
@@ -93,8 +93,249 @@ _MULTIPLYRESPONSE = _descriptor.Descriptor(
   serialized_end=91,
 )
 
+
+_EMPTY = _descriptor.Descriptor(
+  name='Empty',
+  full_name='Empty',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=93,
+  serialized_end=100,
+)
+
+
+_MULTIPLYLONGREQUEST = _descriptor.Descriptor(
+  name='MultiplyLongRequest',
+  full_name='MultiplyLongRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='a', full_name='MultiplyLongRequest.a', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='b', full_name='MultiplyLongRequest.b', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=102,
+  serialized_end=145,
+)
+
+
+_MULTIPLYLONGRESPONSE = _descriptor.Descriptor(
+  name='MultiplyLongResponse',
+  full_name='MultiplyLongResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='MultiplyLongResponse.result', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=147,
+  serialized_end=185,
+)
+
+
+_MULTIPLYEIGHTLONGSREQUEST = _descriptor.Descriptor(
+  name='MultiplyEightLongsRequest',
+  full_name='MultiplyEightLongsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='a', full_name='MultiplyEightLongsRequest.a', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='b', full_name='MultiplyEightLongsRequest.b', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='c', full_name='MultiplyEightLongsRequest.c', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='d', full_name='MultiplyEightLongsRequest.d', index=3,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='e', full_name='MultiplyEightLongsRequest.e', index=4,
+      number=5, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='f', full_name='MultiplyEightLongsRequest.f', index=5,
+      number=6, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='g', full_name='MultiplyEightLongsRequest.g', index=6,
+      number=7, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='h', full_name='MultiplyEightLongsRequest.h', index=7,
+      number=8, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=187,
+  serialized_end=302,
+)
+
+
+_STRINGREQUEST = _descriptor.Descriptor(
+  name='StringRequest',
+  full_name='StringRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='a', full_name='StringRequest.a', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=304,
+  serialized_end=330,
+)
+
+
+_STRINGRESPONSE = _descriptor.Descriptor(
+  name='StringResponse',
+  full_name='StringResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='StringResponse.result', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=332,
+  serialized_end=364,
+)
+
 DESCRIPTOR.message_types_by_name['MultiplyRequest'] = _MULTIPLYREQUEST
 DESCRIPTOR.message_types_by_name['MultiplyResponse'] = _MULTIPLYRESPONSE
+DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
+DESCRIPTOR.message_types_by_name['MultiplyLongRequest'] = _MULTIPLYLONGREQUEST
+DESCRIPTOR.message_types_by_name['MultiplyLongResponse'] = _MULTIPLYLONGRESPONSE
+DESCRIPTOR.message_types_by_name['MultiplyEightLongsRequest'] = _MULTIPLYEIGHTLONGSREQUEST
+DESCRIPTOR.message_types_by_name['StringRequest'] = _STRINGREQUEST
+DESCRIPTOR.message_types_by_name['StringResponse'] = _STRINGRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 MultiplyRequest = _reflection.GeneratedProtocolMessageType('MultiplyRequest', (_message.Message,), dict(
@@ -111,6 +352,48 @@ MultiplyResponse = _reflection.GeneratedProtocolMessageType('MultiplyResponse', 
   ))
 _sym_db.RegisterMessage(MultiplyResponse)
 
+Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), dict(
+  DESCRIPTOR = _EMPTY,
+  __module__ = 'simple_pb2'
+  # @@protoc_insertion_point(class_scope:Empty)
+  ))
+_sym_db.RegisterMessage(Empty)
+
+MultiplyLongRequest = _reflection.GeneratedProtocolMessageType('MultiplyLongRequest', (_message.Message,), dict(
+  DESCRIPTOR = _MULTIPLYLONGREQUEST,
+  __module__ = 'simple_pb2'
+  # @@protoc_insertion_point(class_scope:MultiplyLongRequest)
+  ))
+_sym_db.RegisterMessage(MultiplyLongRequest)
+
+MultiplyLongResponse = _reflection.GeneratedProtocolMessageType('MultiplyLongResponse', (_message.Message,), dict(
+  DESCRIPTOR = _MULTIPLYLONGRESPONSE,
+  __module__ = 'simple_pb2'
+  # @@protoc_insertion_point(class_scope:MultiplyLongResponse)
+  ))
+_sym_db.RegisterMessage(MultiplyLongResponse)
+
+MultiplyEightLongsRequest = _reflection.GeneratedProtocolMessageType('MultiplyEightLongsRequest', (_message.Message,), dict(
+  DESCRIPTOR = _MULTIPLYEIGHTLONGSREQUEST,
+  __module__ = 'simple_pb2'
+  # @@protoc_insertion_point(class_scope:MultiplyEightLongsRequest)
+  ))
+_sym_db.RegisterMessage(MultiplyEightLongsRequest)
+
+StringRequest = _reflection.GeneratedProtocolMessageType('StringRequest', (_message.Message,), dict(
+  DESCRIPTOR = _STRINGREQUEST,
+  __module__ = 'simple_pb2'
+  # @@protoc_insertion_point(class_scope:StringRequest)
+  ))
+_sym_db.RegisterMessage(StringRequest)
+
+StringResponse = _reflection.GeneratedProtocolMessageType('StringResponse', (_message.Message,), dict(
+  DESCRIPTOR = _STRINGRESPONSE,
+  __module__ = 'simple_pb2'
+  # @@protoc_insertion_point(class_scope:StringResponse)
+  ))
+_sym_db.RegisterMessage(StringResponse)
+
 
 
 _DELIVERER = _descriptor.ServiceDescriptor(
@@ -119,8 +402,8 @@ _DELIVERER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=93,
-  serialized_end=162,
+  serialized_start=367,
+  serialized_end=664,
   methods=[
   _descriptor.MethodDescriptor(
     name='MultiplyNumbers',
@@ -129,6 +412,42 @@ _DELIVERER = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_MULTIPLYREQUEST,
     output_type=_MULTIPLYRESPONSE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='MultiplyOnServer',
+    full_name='Deliverer.MultiplyOnServer',
+    index=1,
+    containing_service=None,
+    input_type=_EMPTY,
+    output_type=_EMPTY,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='MultiplyLong',
+    full_name='Deliverer.MultiplyLong',
+    index=2,
+    containing_service=None,
+    input_type=_MULTIPLYLONGREQUEST,
+    output_type=_MULTIPLYLONGRESPONSE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='MultiplyEightLongs',
+    full_name='Deliverer.MultiplyEightLongs',
+    index=3,
+    containing_service=None,
+    input_type=_MULTIPLYEIGHTLONGSREQUEST,
+    output_type=_MULTIPLYLONGRESPONSE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='StringReplace',
+    full_name='Deliverer.StringReplace',
+    index=4,
+    containing_service=None,
+    input_type=_STRINGREQUEST,
+    output_type=_STRINGRESPONSE,
     options=None,
   ),
 ])

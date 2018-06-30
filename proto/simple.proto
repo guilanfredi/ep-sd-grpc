@@ -1,7 +1,28 @@
 syntax = "proto3";
 
 service Deliverer {
+	//Multiplicar dois valores Int
 	rpc MultiplyNumbers (MultiplyRequest) returns (MultiplyResponse) {}
+	
+	//1)
+	//operação sem parâmetros e sem valor de retorno
+	rpc MultiplyOnServer (Empty) returns (Empty) {}
+
+	//2)
+	//operação com um long de parâmetro e retorna um long
+	rpc MultiplyLong(MultiplyLongRequest) returns (MultiplyLongResponse){}
+
+	//3)
+	//operação com um 8 valores long de parâmetro e retorna um long
+	rpc MultiplyEightLongs(MultiplyEightLongsRequest) returns (MultiplyLongResponse){}
+
+	//4)
+	//operação com parâmetro string e valor de retorno string
+	rpc StringReplace(StringRequest) returns (StringResponse){}
+
+	//TODO
+	//5)
+	//operação com tipo complexo
 }
 
 message MultiplyRequest {
@@ -11,4 +32,34 @@ message MultiplyRequest {
 
 message MultiplyResponse {
 	int32 result = 1;
+}
+
+message Empty{}
+
+message MultiplyLongRequest {
+	int64 a = 1;
+	int64 b = 2;
+}
+
+message MultiplyLongResponse {
+	int64 result = 1;
+}
+
+message MultiplyEightLongsRequest {
+	int64 a = 1;
+	int64 b = 2;
+	int64 c = 3;
+	int64 d = 4;
+	int64 e = 5;
+	int64 f = 6;
+	int64 g = 7;
+	int64 h = 8;
+}
+
+message StringRequest{
+	string a = 1;
+}
+
+message StringResponse{
+	string result = 1;
 }

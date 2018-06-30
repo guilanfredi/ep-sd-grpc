@@ -19,6 +19,26 @@ class DelivererStub(object):
         request_serializer=simple__pb2.MultiplyRequest.SerializeToString,
         response_deserializer=simple__pb2.MultiplyResponse.FromString,
         )
+    self.MultiplyOnServer = channel.unary_unary(
+        '/Deliverer/MultiplyOnServer',
+        request_serializer=simple__pb2.Empty.SerializeToString,
+        response_deserializer=simple__pb2.Empty.FromString,
+        )
+    self.MultiplyLong = channel.unary_unary(
+        '/Deliverer/MultiplyLong',
+        request_serializer=simple__pb2.MultiplyLongRequest.SerializeToString,
+        response_deserializer=simple__pb2.MultiplyLongResponse.FromString,
+        )
+    self.MultiplyEightLongs = channel.unary_unary(
+        '/Deliverer/MultiplyEightLongs',
+        request_serializer=simple__pb2.MultiplyEightLongsRequest.SerializeToString,
+        response_deserializer=simple__pb2.MultiplyLongResponse.FromString,
+        )
+    self.StringReplace = channel.unary_unary(
+        '/Deliverer/StringReplace',
+        request_serializer=simple__pb2.StringRequest.SerializeToString,
+        response_deserializer=simple__pb2.StringResponse.FromString,
+        )
 
 
 class DelivererServicer(object):
@@ -26,8 +46,40 @@ class DelivererServicer(object):
   pass
 
   def MultiplyNumbers(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
+    """Multiplicar dois valores Int
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def MultiplyOnServer(self, request, context):
+    """1)
+    operação sem parâmetros e sem valor de retorno
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def MultiplyLong(self, request, context):
+    """2)
+    operação com um long de parâmetro e retorna um long
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def MultiplyEightLongs(self, request, context):
+    """3)
+    operação com um 8 valores long de parâmetro e retorna um long
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def StringReplace(self, request, context):
+    """4)
+    operação com parâmetro string e valor de retorno string
+    """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
@@ -39,6 +91,26 @@ def add_DelivererServicer_to_server(servicer, server):
           servicer.MultiplyNumbers,
           request_deserializer=simple__pb2.MultiplyRequest.FromString,
           response_serializer=simple__pb2.MultiplyResponse.SerializeToString,
+      ),
+      'MultiplyOnServer': grpc.unary_unary_rpc_method_handler(
+          servicer.MultiplyOnServer,
+          request_deserializer=simple__pb2.Empty.FromString,
+          response_serializer=simple__pb2.Empty.SerializeToString,
+      ),
+      'MultiplyLong': grpc.unary_unary_rpc_method_handler(
+          servicer.MultiplyLong,
+          request_deserializer=simple__pb2.MultiplyLongRequest.FromString,
+          response_serializer=simple__pb2.MultiplyLongResponse.SerializeToString,
+      ),
+      'MultiplyEightLongs': grpc.unary_unary_rpc_method_handler(
+          servicer.MultiplyEightLongs,
+          request_deserializer=simple__pb2.MultiplyEightLongsRequest.FromString,
+          response_serializer=simple__pb2.MultiplyLongResponse.SerializeToString,
+      ),
+      'StringReplace': grpc.unary_unary_rpc_method_handler(
+          servicer.StringReplace,
+          request_deserializer=simple__pb2.StringRequest.FromString,
+          response_serializer=simple__pb2.StringResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
