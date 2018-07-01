@@ -10,11 +10,7 @@ _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
 class Deliverer(simple_pb2_grpc.DelivererServicer):
 	
-	def SumNumbers(self, request, context):
-		aux = request.a + request.b
-		return simple_pb2.SumResponse(result=aux)
-	
-	def SumOnServer(self, request, context):
+	def VoidOnServer(self, request, context):
 		aux = 2 + 3
 		return simple_pb2.Empty()
 	

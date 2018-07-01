@@ -1,12 +1,10 @@
 syntax = "proto3";
 
 service Deliverer {
-	//Multiplicar dois valores Int
-	rpc SumNumbers (SumRequest) returns (SumResponse) {}
 	
 	//1)
 	//operação sem parâmetros e sem valor de retorno
-	rpc SumOnServer (Empty) returns (Empty) {}
+	rpc VoidOnServer (Empty) returns (Empty) {}
 
 	//2)
 	//operação com um long de parâmetro e retorna um long
@@ -23,15 +21,6 @@ service Deliverer {
 	//TODO
 	//5)
 	//operação com tipo complexo
-}
-
-message SumRequest {
-	int32 a = 1;
-	int32 b = 2;
-}
-
-message SumResponse {
-	int32 result = 1;
 }
 
 message Empty{}

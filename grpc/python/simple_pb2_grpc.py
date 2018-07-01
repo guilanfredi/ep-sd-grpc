@@ -14,13 +14,8 @@ class DelivererStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.SumNumbers = channel.unary_unary(
-        '/Deliverer/SumNumbers',
-        request_serializer=simple__pb2.SumRequest.SerializeToString,
-        response_deserializer=simple__pb2.SumResponse.FromString,
-        )
-    self.SumOnServer = channel.unary_unary(
-        '/Deliverer/SumOnServer',
+    self.VoidOnServer = channel.unary_unary(
+        '/Deliverer/VoidOnServer',
         request_serializer=simple__pb2.Empty.SerializeToString,
         response_deserializer=simple__pb2.Empty.FromString,
         )
@@ -45,14 +40,7 @@ class DelivererServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def SumNumbers(self, request, context):
-    """Multiplicar dois valores Int
-    """
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def SumOnServer(self, request, context):
+  def VoidOnServer(self, request, context):
     """1)
     operação sem parâmetros e sem valor de retorno
     """
@@ -87,13 +75,8 @@ class DelivererServicer(object):
 
 def add_DelivererServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'SumNumbers': grpc.unary_unary_rpc_method_handler(
-          servicer.SumNumbers,
-          request_deserializer=simple__pb2.SumRequest.FromString,
-          response_serializer=simple__pb2.SumResponse.SerializeToString,
-      ),
-      'SumOnServer': grpc.unary_unary_rpc_method_handler(
-          servicer.SumOnServer,
+      'VoidOnServer': grpc.unary_unary_rpc_method_handler(
+          servicer.VoidOnServer,
           request_deserializer=simple__pb2.Empty.FromString,
           response_serializer=simple__pb2.Empty.SerializeToString,
       ),
