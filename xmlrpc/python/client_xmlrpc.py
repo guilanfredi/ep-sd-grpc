@@ -45,7 +45,7 @@ if __name__ == '__main__':
     logs.write("Resultado: {}\n".format(resultado))
     logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 
-
+    # Maximizar Strings
     string = "a"
     i = 0
     while(i < 10):
@@ -59,12 +59,32 @@ if __name__ == '__main__':
         logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
         i = i + 1
 
+    string = "a"
+    i = 0
+    while(i < 10):
+        start_time = time.time() * 1000
+        resultado = s.maximize(string)
+        end_time = time.time() * 1000
+        logs.write("Metodo: String to uppercase\n")
+
+        if(len(string) > 2):
+            logs.write("Parametros: '{}...' Tamanho: {}\n".format(string[:2], len(string)))
+            logs.write("Resultado: '{}...' Tamanho: {}\n".format(resultado[:2], len(resultado)))
+        else:
+            logs.write("Parametros: '{}' Tamanho: {}\n".format(string, len(string)))
+            logs.write("Resultado: '{}' Tamanho: {}\n".format(resultado, len(resultado)))
+
+        logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
+
+        string = string + string
+        i = i + 1
+
     # Quadrado do primeiro menos quadrado do segundo
     start_time = time.time() * 1000
-    resultado = s.quadradoDoPrimeiroMenosQuadradodoSegundo(3,2)
+    resultado = s.quadradoDoPrimeiroMenosQuadradodoSegundo(3, 2)
     end_time = time.time() * 1000
     logs.write("Metodo: Quadrado do primeiro menos quadrado do segundo (a^2 - b^2)\n")
-    logs.write("Parametros: {},{}\n".format(3,2))
+    logs.write("Parametros: {},{}\n".format(3, 2))
     logs.write("Resultado: {}\n".format(resultado))
     logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 
