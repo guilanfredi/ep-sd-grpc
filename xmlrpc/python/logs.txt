@@ -1,7 +1,7 @@
 Metodo: Sem parametros e sem retorno
 Parametros: Nenhum
 Resultado: Sem resultado
-Tempo de execucao: 0 ms
+Tempo de execucao: 1031 ms
 
 Metodo: Duplicar um Long
 Parametros: 922337203685477633
@@ -13,8 +13,53 @@ Parametros: 922337203685477633,922337203685477634,922337203685477635,92233720368
 Resultado: 7378697629483821092
 Tempo de execucao: 1031 ms
 
-Metodo: Maximizar Strings
-Parametros: aa
-Resultado: AA
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 2
+Resultado: 'AA...' Tamanho: 2
+Tempo de execucao: 1031 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 4
+Resultado: 'AA...' Tamanho: 4
+Tempo de execucao: 1031 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 8
+Resultado: 'AA...' Tamanho: 8
+Tempo de execucao: 1031 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 16
+Resultado: 'AA...' Tamanho: 16
+Tempo de execucao: 1031 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 32
+Resultado: 'AA...' Tamanho: 32
+Tempo de execucao: 1031 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 64
+Resultado: 'AA...' Tamanho: 64
+Tempo de execucao: 1031 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 128
+Resultado: 'AA...' Tamanho: 128
+Tempo de execucao: 1031 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 256
+Resultado: 'AA...' Tamanho: 256
+Tempo de execucao: 1031 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 512
+Resultado: 'AA...' Tamanho: 512
+Tempo de execucao: 1031 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 1024
+Resultado: 'AA...' Tamanho: 1024
 Tempo de execucao: 1031 ms
 
