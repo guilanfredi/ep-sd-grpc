@@ -58,3 +58,14 @@ if __name__ == '__main__':
         logs.write("Resultado: 'AA...' Tamanho: {}\n".format(len(string)))
         logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
         i = i + 1
+
+    # Soma oito Longs
+    start_time = time.time() * 1000
+    resultado = s.quadradoDoPrimeiroMenosQuadradodoSegundo(3,2)
+    end_time = time.time() * 1000
+    logs.write("Metodo: Quadrado do primeiro menos quadrado do segundo (a^2 - b^2)\n")
+    logs.write("Parametros: {},{}\n".format(3,2))
+    logs.write("Resultado: {}\n".format(resultado))
+    logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
+
+    logs.close()

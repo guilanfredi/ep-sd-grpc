@@ -1,6 +1,15 @@
 from xmlrpc.server import SimpleXMLRPCServer
 from xmlrpc.server import SimpleXMLRPCRequestHandler
 
+class Calculadora(object):
+    def __init__(self):
+        self.operacoes = {'soma':self.soma,'subtracao':self.subtracao}
+
+    def soma(self, a, b):
+        return a + b
+
+    def subtracao(self, a, b):
+        return a-b
 
 # RPC Paths/Handler
 class RequestHandler(SimpleXMLRPCRequestHandler):
@@ -23,10 +32,22 @@ with SimpleXMLRPCServer(('localhost', 8000), requestHandler=RequestHandler,allow
     def maximizeString_function(a):
         return a.upper()
 
+    def maximizeString_function(a):
+        return a.upper()
+
+    def quadradoDoPrimeiroMenosQuadradodoSegundo(a, b):
+        calc = Calculadora()
+        add = calc.operacoes['soma'](a, b)
+        sub = calc.operacoes['subtracao'](a, b)
+        return add * sub
+
     server.register_function(adder_function, 'add')
     server.register_function(duplicate_function, 'dup')
     server.register_function(void_function, 'void')
     server.register_function(maximizeString_function, 'maximize')
+    server.register_function(quadradoDoPrimeiroMenosQuadradodoSegundo, 'quadradoDoPrimeiroMenosQuadradodoSegundo')
+
 
     # Rodando o servidor
+
     server.serve_forever()

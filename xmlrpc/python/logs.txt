@@ -11,7 +11,7 @@ Tempo de execucao: 1031 ms
 Metodo: Soma de oito Longs
 Parametros: 922337203685477633,922337203685477634,922337203685477635,922337203685477636,922337203685477637,922337203685477638,922337203685477639,922337203685477640
 Resultado: 7378697629483821092
-Tempo de execucao: 1031 ms
+Tempo de execucao: 1015 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 2
@@ -26,12 +26,12 @@ Tempo de execucao: 1031 ms
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 8
 Resultado: 'AA...' Tamanho: 8
-Tempo de execucao: 1031 ms
+Tempo de execucao: 1015 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 16
 Resultado: 'AA...' Tamanho: 16
-Tempo de execucao: 1031 ms
+Tempo de execucao: 1015 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 32
@@ -41,7 +41,7 @@ Tempo de execucao: 1031 ms
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 64
 Resultado: 'AA...' Tamanho: 64
-Tempo de execucao: 1031 ms
+Tempo de execucao: 1015 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 128
@@ -51,15 +51,20 @@ Tempo de execucao: 1031 ms
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 256
 Resultado: 'AA...' Tamanho: 256
-Tempo de execucao: 1031 ms
+Tempo de execucao: 1015 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 512
 Resultado: 'AA...' Tamanho: 512
-Tempo de execucao: 1031 ms
+Tempo de execucao: 1015 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 1024
 Resultado: 'AA...' Tamanho: 1024
+Tempo de execucao: 1031 ms
+
+Metodo: Quadrado do primeiro menos quadrado do segundo (a^2 - b^2)
+Parametros: 3,2
+Resultado: 5
 Tempo de execucao: 1031 ms
 
