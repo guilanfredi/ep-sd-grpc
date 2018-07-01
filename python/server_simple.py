@@ -16,7 +16,6 @@ class Deliverer(simple_pb2_grpc.DelivererServicer):
 	
 	def SumOnServer(self, request, context):
 		aux = 2 + 3
-		print(aux)
 		return simple_pb2.Empty()
 	
 	def SumLong(self, request, context):
