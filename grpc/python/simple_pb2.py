@@ -19,79 +19,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='simple.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x0csimple.proto\"\"\n\nSumRequest\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x05\"\x1d\n\x0bSumResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\x07\n\x05\x45mpty\"&\n\x0eSumLongRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\"!\n\x0fSumLongResponse\x12\x0e\n\x06result\x18\x01 \x01(\x03\"n\n\x14SumEightLongsRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\x03\x12\t\n\x01\x64\x18\x04 \x01(\x03\x12\t\n\x01\x65\x18\x05 \x01(\x03\x12\t\n\x01\x66\x18\x06 \x01(\x03\x12\t\n\x01g\x18\x07 \x01(\x03\x12\t\n\x01h\x18\x08 \x01(\x03\"\x1a\n\rStringRequest\x12\t\n\x01\x61\x18\x01 \x01(\t\" \n\x0eStringResponse\x12\x0e\n\x06result\x18\x01 \x01(\t2\xf7\x01\n\tDeliverer\x12)\n\nSumNumbers\x12\x0b.SumRequest\x1a\x0c.SumResponse\"\x00\x12\x1f\n\x0bSumOnServer\x12\x06.Empty\x1a\x06.Empty\"\x00\x12.\n\x07SumLong\x12\x0f.SumLongRequest\x1a\x10.SumLongResponse\"\x00\x12:\n\rSumEightLongs\x12\x15.SumEightLongsRequest\x1a\x10.SumLongResponse\"\x00\x12\x32\n\rStringReplace\x12\x0e.StringRequest\x1a\x0f.StringResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0csimple.proto\"\x07\n\x05\x45mpty\"&\n\x0eSumLongRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\"!\n\x0fSumLongResponse\x12\x0e\n\x06result\x18\x01 \x01(\x03\"n\n\x14SumEightLongsRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\x03\x12\t\n\x01\x64\x18\x04 \x01(\x03\x12\t\n\x01\x65\x18\x05 \x01(\x03\x12\t\n\x01\x66\x18\x06 \x01(\x03\x12\t\n\x01g\x18\x07 \x01(\x03\x12\t\n\x01h\x18\x08 \x01(\x03\"\x1a\n\rStringRequest\x12\t\n\x01\x61\x18\x01 \x01(\t\" \n\x0eStringResponse\x12\x0e\n\x06result\x18\x01 \x01(\t2\xcd\x01\n\tDeliverer\x12 \n\x0cVoidOnServer\x12\x06.Empty\x1a\x06.Empty\"\x00\x12.\n\x07SumLong\x12\x0f.SumLongRequest\x1a\x10.SumLongResponse\"\x00\x12:\n\rSumEightLongs\x12\x15.SumEightLongsRequest\x1a\x10.SumLongResponse\"\x00\x12\x32\n\rStringReplace\x12\x0e.StringRequest\x1a\x0f.StringResponse\"\x00\x62\x06proto3')
 )
 
 
-
-
-_SUMREQUEST = _descriptor.Descriptor(
-  name='SumRequest',
-  full_name='SumRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='a', full_name='SumRequest.a', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='b', full_name='SumRequest.b', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=16,
-  serialized_end=50,
-)
-
-
-_SUMRESPONSE = _descriptor.Descriptor(
-  name='SumResponse',
-  full_name='SumResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='result', full_name='SumResponse.result', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=52,
-  serialized_end=81,
-)
 
 
 _EMPTY = _descriptor.Descriptor(
@@ -113,8 +44,8 @@ _EMPTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=83,
-  serialized_end=90,
+  serialized_start=16,
+  serialized_end=23,
 )
 
 
@@ -151,8 +82,8 @@ _SUMLONGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=92,
-  serialized_end=130,
+  serialized_start=25,
+  serialized_end=63,
 )
 
 
@@ -182,8 +113,8 @@ _SUMLONGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=132,
-  serialized_end=165,
+  serialized_start=65,
+  serialized_end=98,
 )
 
 
@@ -262,8 +193,8 @@ _SUMEIGHTLONGSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=167,
-  serialized_end=277,
+  serialized_start=100,
+  serialized_end=210,
 )
 
 
@@ -293,8 +224,8 @@ _STRINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=279,
-  serialized_end=305,
+  serialized_start=212,
+  serialized_end=238,
 )
 
 
@@ -324,12 +255,10 @@ _STRINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=307,
-  serialized_end=339,
+  serialized_start=240,
+  serialized_end=272,
 )
 
-DESCRIPTOR.message_types_by_name['SumRequest'] = _SUMREQUEST
-DESCRIPTOR.message_types_by_name['SumResponse'] = _SUMRESPONSE
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
 DESCRIPTOR.message_types_by_name['SumLongRequest'] = _SUMLONGREQUEST
 DESCRIPTOR.message_types_by_name['SumLongResponse'] = _SUMLONGRESPONSE
@@ -337,20 +266,6 @@ DESCRIPTOR.message_types_by_name['SumEightLongsRequest'] = _SUMEIGHTLONGSREQUEST
 DESCRIPTOR.message_types_by_name['StringRequest'] = _STRINGREQUEST
 DESCRIPTOR.message_types_by_name['StringResponse'] = _STRINGRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
-SumRequest = _reflection.GeneratedProtocolMessageType('SumRequest', (_message.Message,), dict(
-  DESCRIPTOR = _SUMREQUEST,
-  __module__ = 'simple_pb2'
-  # @@protoc_insertion_point(class_scope:SumRequest)
-  ))
-_sym_db.RegisterMessage(SumRequest)
-
-SumResponse = _reflection.GeneratedProtocolMessageType('SumResponse', (_message.Message,), dict(
-  DESCRIPTOR = _SUMRESPONSE,
-  __module__ = 'simple_pb2'
-  # @@protoc_insertion_point(class_scope:SumResponse)
-  ))
-_sym_db.RegisterMessage(SumResponse)
 
 Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), dict(
   DESCRIPTOR = _EMPTY,
@@ -402,22 +317,13 @@ _DELIVERER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=342,
-  serialized_end=589,
+  serialized_start=275,
+  serialized_end=480,
   methods=[
   _descriptor.MethodDescriptor(
-    name='SumNumbers',
-    full_name='Deliverer.SumNumbers',
+    name='VoidOnServer',
+    full_name='Deliverer.VoidOnServer',
     index=0,
-    containing_service=None,
-    input_type=_SUMREQUEST,
-    output_type=_SUMRESPONSE,
-    options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='SumOnServer',
-    full_name='Deliverer.SumOnServer',
-    index=1,
     containing_service=None,
     input_type=_EMPTY,
     output_type=_EMPTY,
@@ -426,7 +332,7 @@ _DELIVERER = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='SumLong',
     full_name='Deliverer.SumLong',
-    index=2,
+    index=1,
     containing_service=None,
     input_type=_SUMLONGREQUEST,
     output_type=_SUMLONGRESPONSE,
@@ -435,7 +341,7 @@ _DELIVERER = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='SumEightLongs',
     full_name='Deliverer.SumEightLongs',
-    index=3,
+    index=2,
     containing_service=None,
     input_type=_SUMEIGHTLONGSREQUEST,
     output_type=_SUMLONGRESPONSE,
@@ -444,7 +350,7 @@ _DELIVERER = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='StringReplace',
     full_name='Deliverer.StringReplace',
-    index=4,
+    index=3,
     containing_service=None,
     input_type=_STRINGREQUEST,
     output_type=_STRINGRESPONSE,
