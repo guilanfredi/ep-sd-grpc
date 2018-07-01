@@ -37,7 +37,7 @@ def run():
 	logs.write("Metodo: Sem parametros e sem retorno\n")
 	logs.write("Parametros: \n")
 	logs.write("Resultado: \n")
-	logs.write("Tempo de execucao: {} ms\n\n".format(end_time - start_time))
+	logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 	
 
 
@@ -47,7 +47,7 @@ def run():
 	logs.write("Metodo: Soma dois longs\n")
 	logs.write("Parametros: {} e {}\n".format(num1,num2))
 	logs.write("Resultado: {}\n".format(response.result))
-	logs.write("Tempo de execucao: {} ms\n\n".format(end_time - start_time))
+	logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 
 
 
@@ -57,13 +57,13 @@ def run():
 	logs.write("Metodo: Soma oito longs\n")
 	logs.write("Parametros: {}, {}, {}, {}, {}, {}, {}, {}\n".format(num1,num2,num3,num4,num5,num6,num7,num8))
 	logs.write("Resultado: {}\n".format(response.result))
-	logs.write("Tempo de execucao: {} ms\n\n".format(end_time - start_time))
+	logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 
 
 
 	firstString = "aa"
 	i = 0
-	while(i < 10):
+	while(i < 9):
 		firstString = firstString + firstString
 		start_time = time.time() * 1000
 		response = stub.StringReplace(simple_pb2.StringRequest(a=firstString))
@@ -71,7 +71,7 @@ def run():
 		logs.write("Metodo: String to uppercase\n")
 		logs.write("Parametros: 'aa...' Tamanho: {}\n".format(len(firstString)))
 		logs.write("Parametros: 'AA...' Tamanho: {}\n".format(len(firstString)))
-		logs.write("Tempo de execucao: {} ms\n\n".format(end_time - start_time))
+		logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 		i = i + 1
 
 
