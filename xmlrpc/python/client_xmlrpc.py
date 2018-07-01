@@ -59,7 +59,7 @@ if __name__ == '__main__':
         logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
         i = i + 1
 
-    # Soma oito Longs
+    # Quadrado do primeiro menos quadrado do segundo
     start_time = time.time() * 1000
     resultado = s.quadradoDoPrimeiroMenosQuadradodoSegundo(3,2)
     end_time = time.time() * 1000
