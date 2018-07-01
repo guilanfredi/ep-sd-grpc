@@ -1,0 +1,20 @@
+Metodo: Sem parametros e sem retorno
+Parametros: Nenhum
+Resultado: Sem resultado
+Tempo de execucao: 0 ms
+
+Metodo: Duplicar um Long
+Parametros: 922337203685477633
+Resultado: 1844674407370955266
+Tempo de execucao: 1031 ms
+
+Metodo: Soma de oito Longs
+Parametros: 922337203685477633,922337203685477634,922337203685477635,922337203685477636,922337203685477637,922337203685477638,922337203685477639,922337203685477640
+Resultado: 7378697629483821092
+Tempo de execucao: 1031 ms
+
+Metodo: Maximizar Strings
+Parametros: aa
+Resultado: AA
+Tempo de execucao: 1031 ms
+
