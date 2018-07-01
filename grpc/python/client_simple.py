@@ -61,17 +61,25 @@ def run():
 
 
 
-	firstString = "aa"
+	firstString = "a"
 	i = 0
-	while(i < 9):
-		firstString = firstString + firstString
+	while(i < 10):
+		
 		start_time = time.time() * 1000
 		response = stub.StringReplace(simple_pb2.StringRequest(a=firstString))
 		end_time = time.time() * 1000
 		logs.write("Metodo: String to uppercase\n")
-		logs.write("Parametros: 'aa...' Tamanho: {}\n".format(len(firstString)))
-		logs.write("Parametros: 'AA...' Tamanho: {}\n".format(len(firstString)))
+
+		if(len(firstString) > 2):
+			logs.write("Parametros: '{}...' Tamanho: {}\n".format(firstString[:2], len(firstString)))
+			logs.write("Resultado: '{}...' Tamanho: {}\n".format(response.result[:2], len(response.result)))
+		else:
+			logs.write("Parametros: '{}' Tamanho: {}\n".format(firstString, len(firstString)))
+			logs.write("Resultado: '{}' Tamanho: {}\n".format(response.result, len(response.result)))
+
 		logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
+		
+		firstString = firstString + firstString
 		i = i + 1
 
 

@@ -6,60 +6,60 @@ Tempo de execucao: 0 ms
 Metodo: Soma dois longs
 Parametros: 922337203685477633 e 922337203685477634
 Resultado: 1844674407370955267
-Tempo de execucao: 1 ms
+Tempo de execucao: 0 ms
 
 Metodo: Soma oito longs
 Parametros: 922337203685477633, 922337203685477634, 922337203685477635, 922337203685477636, 922337203685477637, 922337203685477638, 922337203685477639, 922337203685477640
 Resultado: 7378697629483821092
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'a' Tamanho: 1
+Resultado: 'A' Tamanho: 1
 Tempo de execucao: 1 ms
 
 Metodo: String to uppercase
+Parametros: 'aa' Tamanho: 2
+Resultado: 'AA' Tamanho: 2
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 4
-Parametros: 'AA...' Tamanho: 4
+Resultado: 'AA...' Tamanho: 4
 Tempo de execucao: 1 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 8
-Parametros: 'AA...' Tamanho: 8
-Tempo de execucao: 1 ms
+Resultado: 'AA...' Tamanho: 8
+Tempo de execucao: 0 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 16
-Parametros: 'AA...' Tamanho: 16
+Resultado: 'AA...' Tamanho: 16
 Tempo de execucao: 0 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 32
-Parametros: 'AA...' Tamanho: 32
-Tempo de execucao: 1 ms
+Resultado: 'AA...' Tamanho: 32
+Tempo de execucao: 0 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 64
-Parametros: 'AA...' Tamanho: 64
+Resultado: 'AA...' Tamanho: 64
 Tempo de execucao: 1 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 128
-Parametros: 'AA...' Tamanho: 128
+Resultado: 'AA...' Tamanho: 128
 Tempo de execucao: 0 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 256
-Parametros: 'AA...' Tamanho: 256
+Resultado: 'AA...' Tamanho: 256
 Tempo de execucao: 1 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 512
-Parametros: 'AA...' Tamanho: 512
-Tempo de execucao: 0 ms
-
-Metodo: String to uppercase
-Parametros: 'aa...' Tamanho: 1024
-Parametros: 'AA...' Tamanho: 1024
-Tempo de execucao: 1 ms
-
-Metodo: String to uppercase
-Parametros: 'aa...' Tamanho: 2048
-Parametros: 'AA...' Tamanho: 2048
+Resultado: 'AA...' Tamanho: 512
 Tempo de execucao: 0 ms
 
