@@ -1,31 +1,25 @@
 from xmlrpc.server import SimpleXMLRPCServer
 from xmlrpc.server import SimpleXMLRPCRequestHandler
 
-# Restrict to a particular path.
+# RPC Paths/Handler
 class RequestHandler(SimpleXMLRPCRequestHandler):
     rpc_paths = ('/RPC2',)
 
-# Create server
-with SimpleXMLRPCServer(('localhost', 8000),
-                        requestHandler=RequestHandler) as server:
-    server.register_introspection_functions()
+# Criando o servidor
+with SimpleXMLRPCServer(('localhost', 8000), requestHandler=RequestHandler) as server:
 
-    # Register pow() function; this will use the value of
-    # pow.__name__ as the name, which is just 'pow'.
-    server.register_function(pow)
+    def void_function():
+        a = 2 + 3
+    def adder_function(a,b,c=0,d=0,e=0,f=0,g=0,h=0):
+        return a + b + c + d + e + f + g + h
+    def duplicate_function(a):
+        return a*2
 
-    # Register a function under a different name
-    def adder_function(x, y):
-        return x + y
+
+
+
     server.register_function(adder_function, 'add')
+    server.register_function(void_function, 'add')
 
-    # Register an instance; all the methods of the instance are
-    # published as XML-RPC methods (in this case, just 'mul').
-    class MyFuncs:
-        def mul(self, x, y):
-            return x * y
-
-    server.register_instance(MyFuncs())
-
-    # Run the server's main loop
+    # Rodando o servidor
     server.serve_forever()
