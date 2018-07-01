@@ -52,28 +52,5 @@ def somaOitoLongs(s, a, b, c, d, e, f, g, h):
     logs.write("Resultado: {}\n".format(resultado))
     logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 
-
-# # Método Multiplicacao
-# def mult(s, a, b):
-#     start_time = time.time() * 1000
-#     resultado = s.mul(a, b)
-#     end_time = time.time() * 1000
-#     logs.write("Metodo: Multiplicacao\n")
-#     logs.write("Parametros: {},{}\n".format(a,b))
-#     logs.write("Resultado: {}\n".format(resultado))
-#     logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
-
-
-# # Método Potencia
-# def pow(s,a,b):
-#     start_time = time.time() * 1000
-#     resultado = s.pow(a, b)
-#     end_time = time.time() * 1000
-#     logs.write("Metodo: Potencia\n")
-#     logs.write("Parametros: {},{}\n".format(a,b))
-#     logs.write("Resultado: {}\n".format(resultado))
-#     logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
-
-
 if __name__ == '__main__':
     run()
