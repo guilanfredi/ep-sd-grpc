@@ -34,6 +34,11 @@ class DelivererStub(object):
         request_serializer=simple__pb2.StringRequest.SerializeToString,
         response_deserializer=simple__pb2.StringResponse.FromString,
         )
+    self.ComplexObjectOperation = channel.unary_unary(
+        '/Deliverer/ComplexObjectOperation',
+        request_serializer=simple__pb2.Person.SerializeToString,
+        response_deserializer=simple__pb2.Person.FromString,
+        )
 
 
 class DelivererServicer(object):
@@ -72,6 +77,14 @@ class DelivererServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def ComplexObjectOperation(self, request, context):
+    """TODO
+    5) Operação que passa um tipo complexo e retorna outro tipo complexo
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_DelivererServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -94,6 +107,11 @@ def add_DelivererServicer_to_server(servicer, server):
           servicer.StringReplace,
           request_deserializer=simple__pb2.StringRequest.FromString,
           response_serializer=simple__pb2.StringResponse.SerializeToString,
+      ),
+      'ComplexObjectOperation': grpc.unary_unary_rpc_method_handler(
+          servicer.ComplexObjectOperation,
+          request_deserializer=simple__pb2.Person.FromString,
+          response_serializer=simple__pb2.Person.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

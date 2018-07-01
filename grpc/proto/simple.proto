@@ -19,8 +19,8 @@ service Deliverer {
 	rpc StringReplace(StringRequest) returns (StringResponse){}
 
 	//TODO
-	//5)
-	//operação com tipo complexo
+	//5) Operação que passa um tipo complexo e retorna outro tipo complexo
+	rpc ComplexObjectOperation(Person) returns (Person){}
 }
 
 message Empty{}
@@ -51,4 +51,18 @@ message StringRequest{
 
 message StringResponse{
 	string result = 1;
+}
+
+message Address{
+	string city = 1;
+	string street = 2;
+	int32 number = 3;
+}
+
+message Person{
+	string name = 1;
+	int32 age = 2;
+	repeated Address addresses = 3;
+	float sallary = 4;
+	int32 id = 5;
 }
