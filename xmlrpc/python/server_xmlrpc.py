@@ -45,12 +45,30 @@ with SimpleXMLRPCServer(('localhost', 8000), requestHandler=RequestHandler, allo
             c.execute('INSERT INTO mora (id_pessoa,id_endereco) VALUES ({}, {})'.format(id_pessoa, id_endereco))
             hora = datetime.now()
             conn.commit()
+            
         except Exception:
             raise
 
         resposta = Resposta(id_pessoa, hora)
         return resposta
 
+    def adicionaEndereco(endereco):
+        try:
+            path = './database.db'
+            conn = sqlite3.connect(path)
+            c = conn.cursor()
+            id_pessoa = c.lastrowid
+            c.execute('INSERT INTO enderecos(cidade, rua, numero) VALUES (?, ?, ?)',[endereco['cidade'], endereco['rua'], endereco['numero']])
+            id_endereco = c.lastrowid
+            c.execute('INSERT INTO mora (id_pessoa,id_endereco) VALUES ({}, {})'.format(id_pessoa, id_endereco))
+            hora = datetime.now()
+            conn.commit()
+
+        except Excepton:
+            raise
+
+        resposta = Resposta(id_endereco, hora)
+        return resposta
 
     # Registrando as funcoes
     server.register_function(adder_function, 'add')
@@ -58,6 +76,7 @@ with SimpleXMLRPCServer(('localhost', 8000), requestHandler=RequestHandler, allo
     server.register_function(void_function, 'void')
     server.register_function(maximizeString_function, 'maximize')
     server.register_function(criaPessoa, 'criaPessoa')
+    server.register_function(adicionaEndereco, 'adicionaEndereco')
 
     # Rodando o servidor
     server.serve_forever()
