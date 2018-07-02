@@ -36,8 +36,8 @@ class DelivererStub(object):
         )
     self.ComplexObjectOperation = channel.unary_unary(
         '/Deliverer/ComplexObjectOperation',
-        request_serializer=simple__pb2.Person.SerializeToString,
-        response_deserializer=simple__pb2.Person.FromString,
+        request_serializer=simple__pb2.PessoaEndereco.SerializeToString,
+        response_deserializer=simple__pb2.PessoaResposta.FromString,
         )
 
 
@@ -110,8 +110,8 @@ def add_DelivererServicer_to_server(servicer, server):
       ),
       'ComplexObjectOperation': grpc.unary_unary_rpc_method_handler(
           servicer.ComplexObjectOperation,
-          request_deserializer=simple__pb2.Person.FromString,
-          response_serializer=simple__pb2.Person.SerializeToString,
+          request_deserializer=simple__pb2.PessoaEndereco.FromString,
+          response_serializer=simple__pb2.PessoaResposta.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

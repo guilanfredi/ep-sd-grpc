@@ -20,7 +20,7 @@ service Deliverer {
 
 	//TODO
 	//5) Operação que passa um tipo complexo e retorna outro tipo complexo
-	rpc ComplexObjectOperation(Person) returns (Person){}
+	rpc ComplexObjectOperation(PessoaEndereco) returns (PessoaResposta){}
 }
 
 message Empty{}
@@ -53,16 +53,23 @@ message StringResponse{
 	string result = 1;
 }
 
-message Address{
-	string city = 1;
-	string street = 2;
-	int32 number = 3;
+message PessoaEndereco{
+	Pessoa person = 1;
+	Endereco address = 2;
 }
 
-message Person{
-	string name = 1;
-	int32 age = 2;
-	repeated Address addresses = 3;
-	float sallary = 4;
-	int32 id = 5;
+message Endereco{
+	string cidade = 1;
+	string rua = 2;
+	int32 numero = 3;
+}
+
+message Pessoa{
+	string nome = 1;
+	int32 idade = 2;
+}
+
+message PessoaResposta{
+	int32 id_pessoa = 1;
+	string hora = 2;
 }

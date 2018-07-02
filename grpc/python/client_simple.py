@@ -9,6 +9,8 @@ import grpc
 import simple_pb2
 import simple_pb2_grpc
 
+from objetos import Pessoa, Endereco
+
 def run():
 	
 	channel = grpc.insecure_channel('localhost:50051')
@@ -81,6 +83,17 @@ def run():
 		
 		firstString = firstString + firstString
 		i = i + 1
+
+
+	pessoa = simple_pb2.Pessoa(nome="Guilherme", idade=23)
+	endereco = simple_pb2.Endereco(cidade="Sao Paulo", rua="Maracas", numero=121)
+	start_time = time.time() * 1000
+	resultado = stub.ComplexObjectOperation(simple_pb2.PessoaEndereco(person=pessoa, address=endereco))
+	end_time = time.time() * 1000
+	logs.write("Metodo: Inserir pessoa (objeto) no banco de dados\n")
+	logs.write("Parametros: \n{}\n".format(pessoa, endereco))
+	logs.write("Resultado: \n{}\n".format(resultado))
+	logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 
 
 	logs.close()
