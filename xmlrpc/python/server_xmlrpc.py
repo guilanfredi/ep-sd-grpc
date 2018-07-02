@@ -1,9 +1,9 @@
 from xmlrpc.server import SimpleXMLRPCServer
 from xmlrpc.server import SimpleXMLRPCRequestHandler
-from objetos import Calculadora, Pessoa, Endereco, Resposta
+from objetos import Pessoa, Endereco, Resposta
 import sqlite3
 import time
-
+from datetime import datetime
 
 # RPC Paths/Handler
 class RequestHandler(SimpleXMLRPCRequestHandler):
@@ -26,31 +26,25 @@ with SimpleXMLRPCServer(('localhost', 8000), requestHandler=RequestHandler, allo
     def maximizeString_function(a):
         return a.upper()
 
-    def quadradoDoPrimeiroMenosQuadradodoSegundo(a, b):
-        calc = Calculadora()
-        add = calc.operacoes['soma'](a, b)
-        sub = calc.operacoes['subtracao'](a, b)
-        return add * sub
-
     def criaPessoa(pessoa, endereco):
         try:
             path = './database.db'
             conn = sqlite3.connect(path)
             c = conn.cursor()
-            c.execute('CREATE TABLE IF NOT EXISTS pessoas (id_pessoa integer AUTO_INCREMENT  PRIMARY KEY,nome text NOT NULL, idade integer NOT NULL)')
-            c.execute('CREATE TABLE IF NOT EXISTS enderecos (id_endereco integer AUTO_INCREMENT PRIMARY KEY,cidade text NOT NULL, rua text NOT NULL, numero integer NOT NULL)')
+            c.execute('CREATE TABLE IF NOT EXISTS pessoas (id_pessoa integer  PRIMARY KEY,nome text NOT NULL, idade integer NOT NULL)')
+            c.execute('CREATE TABLE IF NOT EXISTS enderecos (id_endereco integer PRIMARY KEY,cidade text NOT NULL, rua text NOT NULL, numero integer NOT NULL)')
             c.execute('CREATE TABLE IF NOT EXISTS mora (id_pessoa integer NOT NULL,id_endereco integer NOT NULL,FOREIGN KEY (id_pessoa) REFERENCES pessoas (id_pessoa),FOREIGN KEY (id_endereco) REFERENCES enderecos (id_endereco))')
         except Exception:
             raise
 
         try:
-            c.execute('INSERT INTO pessoa (nome,idade) VALUES ({}, {})'.format(pessoa.getNome(), pessoa.getIdade()))
+            c.execute('INSERT INTO pessoas(nome,idade) VALUES (?, ?)',[pessoa['nome'], pessoa['idade']])
             id_pessoa = c.lastrowid
-            c.execute('INSERT INTO endereco (cidade, rua, numero) VALUES ({}, {}, {})'.format(endereco.getCidade(), endereco.getRua(), endereco.getNumero()))
+            c.execute('INSERT INTO enderecos(cidade, rua, numero) VALUES (?, ?, ?)',[endereco['cidade'], endereco['rua'], endereco['numero']])
             id_endereco = c.lastrowid
             c.execute('INSERT INTO mora (id_pessoa,id_endereco) VALUES ({}, {})'.format(id_pessoa, id_endereco))
-            hora = time.clock_realtime
-
+            hora = datetime.now()
+            conn.commit()
         except Exception:
             raise
 
@@ -58,13 +52,11 @@ with SimpleXMLRPCServer(('localhost', 8000), requestHandler=RequestHandler, allo
         return resposta
 
 
-
     # Registrando as funcoes
     server.register_function(adder_function, 'add')
     server.register_function(duplicate_function, 'dup')
     server.register_function(void_function, 'void')
     server.register_function(maximizeString_function, 'maximize')
-    server.register_function(quadradoDoPrimeiroMenosQuadradodoSegundo, 'quadradoDoPrimeiroMenosQuadradodoSegundo')
     server.register_function(criaPessoa, 'criaPessoa')
 
     # Rodando o servidor

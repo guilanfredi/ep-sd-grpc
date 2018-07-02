@@ -1,24 +1,13 @@
-class Calculadora(object):
-    def __init__(self):
-        self.operacoes = {'soma': self.soma, 'subtracao': self.subtracao}
-
-    def soma(self, a, b):
-        return a + b
-
-    def subtracao(self, a, b):
-        return a - b
-
-
 class Pessoa(object):
     def __init__(self, nome, idade):
         self.nome = nome
         self.idade = idade
 
-    def getNome(self):
-        return self.nome
+    # def getNome(self):
+    #     return self.nome
 
-    def getIdade(self):
-        return self.idade
+    # def getIdade(self):
+    #     return self.idade
 
 
 class Endereco(object):
@@ -27,14 +16,14 @@ class Endereco(object):
         self.rua = rua
         self.numero = numero
 
-    def getCidade(self):
-        return self.cidade
+    # def getCidade(self):
+    #     return self.cidade
 
-    def getRua(self):
-        return self.rua
+    # def getRua(self):
+    #     return self.rua
 
-    def getNumero(self):
-        return self.numero
+    # def getNumero(self):
+    #     return self.numero
 
 
 class Resposta(object):

@@ -65,25 +65,16 @@ if __name__ == '__main__':
         string = string + string
         i = i + 1
 
-    # Quadrado do primeiro menos quadrado do segundo
-    a = 3
-    b = 5
-    start_time = time.time() * 1000
-    resultado = s.quadradoDoPrimeiroMenosQuadradodoSegundo(a, b)
-    end_time = time.time() * 1000
-    logs.write("Metodo: Quadrado do primeiro menos quadrado do segundo (a^2 - b^2)\n")
-    logs.write("Parametros: {},{}\n".format(a, b))
-    logs.write("Resultado: {}\n".format(resultado))
-    logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
-
     # Cria Pessoa
     pessoa = Pessoa("Rafael", 23)
     endereco = Endereco("Sao Paulo", "Higienopolis", 1048)
     start_time = time.time() * 1000
+    # pessoaDict = {'Nome':pessoa.getNome(),'Idade':pessoa.getIdade()}
+    # enderecoDict = {'Cidade':endereco.getCidade(),'Rua':endereco.getRua(),'Numero':endereco.getNumero()}
     resultado = s.criaPessoa(pessoa, endereco)
     end_time = time.time() * 1000
-    logs.write("Metodo: Duplicar um Long\n")
-    logs.write("Parametros: {}\n".format(pessoa, endereco))
+    logs.write("Metodo: Inserir pessoa (objeto) no banco de dados\n")
+    logs.write("Parametros: {},{}\n".format(pessoa, endereco))
     logs.write("Resultado: {}\n".format(resultado))
     logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 

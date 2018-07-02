@@ -1,7 +1,7 @@
 Metodo: Sem parametros e sem retorno
 Parametros: Nenhum
 Resultado: Sem resultado
-Tempo de execucao: 1035 ms
+Tempo de execucao: 1015 ms
 
 Metodo: Duplicar um Long
 Parametros: 922337203685477633
@@ -11,37 +11,37 @@ Tempo de execucao: 1030 ms
 Metodo: Soma de oito Longs
 Parametros: 922337203685477633,922337203685477634,922337203685477635,922337203685477636,922337203685477637,922337203685477638,922337203685477639,922337203685477640
 Resultado: 7378697629483821092
-Tempo de execucao: 1039 ms
+Tempo de execucao: 1040 ms
 
 Metodo: String to uppercase
 Parametros: 'a' Tamanho: 1
 Resultado: 'A' Tamanho: 1
-Tempo de execucao: 1039 ms
+Tempo de execucao: 1029 ms
 
 Metodo: String to uppercase
 Parametros: 'aa' Tamanho: 2
 Resultado: 'AA' Tamanho: 2
-Tempo de execucao: 1009 ms
+Tempo de execucao: 1039 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 4
 Resultado: 'AA...' Tamanho: 4
-Tempo de execucao: 1039 ms
+Tempo de execucao: 1040 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 8
 Resultado: 'AA...' Tamanho: 8
-Tempo de execucao: 1036 ms
+Tempo de execucao: 1030 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 16
 Resultado: 'AA...' Tamanho: 16
-Tempo de execucao: 1034 ms
+Tempo de execucao: 1019 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 32
 Resultado: 'AA...' Tamanho: 32
-Tempo de execucao: 1039 ms
+Tempo de execucao: 1040 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 64
@@ -51,20 +51,20 @@ Tempo de execucao: 1029 ms
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 128
 Resultado: 'AA...' Tamanho: 128
-Tempo de execucao: 1039 ms
+Tempo de execucao: 1038 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 256
 Resultado: 'AA...' Tamanho: 256
-Tempo de execucao: 1039 ms
+Tempo de execucao: 1041 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 512
 Resultado: 'AA...' Tamanho: 512
 Tempo de execucao: 1010 ms
 
-Metodo: Quadrado do primeiro menos quadrado do segundo (a^2 - b^2)
-Parametros: 3,5
-Resultado: -16
-Tempo de execucao: 1019 ms
+Metodo: Inserir pessoa (objeto) no banco de dados
+Parametros: <objetos.Pessoa object at 0x0000021E9445CF60>,<objetos.Endereco object at 0x0000021E9445CEB8>
+Resultado: {'id': 1, 'hora': <DateTime '20180701T22:27:44' at 0x21e94478b70>}
+Tempo de execucao: 2013 ms
 
