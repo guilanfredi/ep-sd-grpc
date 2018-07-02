@@ -79,7 +79,7 @@ if __name__ == '__main__':
     # Adiciona endereço na pessoa criada anteriormente
     enderecoNovo = Endereco("Sao Paulo", "Arlindo Bettio", 1000)
     start_time = time.time() * 1000
-    resultado = s.adicionaEndereco(endereco)
+    resultado = s.adicionaEndereco(enderecoNovo)
     end_time = time.time() * 1000
     logs.write("Metodo: Inserir pessoa (objeto) no banco de dados\n")
     logs.write("Parametros: {}\n".format(endereco))

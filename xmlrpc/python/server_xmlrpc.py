@@ -45,7 +45,7 @@ with SimpleXMLRPCServer(('localhost', 8000), requestHandler=RequestHandler, allo
             c.execute('INSERT INTO mora (id_pessoa,id_endereco) VALUES ({}, {})'.format(id_pessoa, id_endereco))
             hora = datetime.now()
             conn.commit()
-            
+
         except Exception:
             raise
 
@@ -57,14 +57,14 @@ with SimpleXMLRPCServer(('localhost', 8000), requestHandler=RequestHandler, allo
             path = './database.db'
             conn = sqlite3.connect(path)
             c = conn.cursor()
-            id_pessoa = c.lastrowid
+            id_pessoa = 1
             c.execute('INSERT INTO enderecos(cidade, rua, numero) VALUES (?, ?, ?)',[endereco['cidade'], endereco['rua'], endereco['numero']])
             id_endereco = c.lastrowid
             c.execute('INSERT INTO mora (id_pessoa,id_endereco) VALUES ({}, {})'.format(id_pessoa, id_endereco))
             hora = datetime.now()
             conn.commit()
 
-        except Excepton:
+        except Exception:
             raise
 
         resposta = Resposta(id_endereco, hora)
