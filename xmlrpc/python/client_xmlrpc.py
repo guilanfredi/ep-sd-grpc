@@ -69,12 +69,20 @@ if __name__ == '__main__':
     pessoa = Pessoa("Rafael", 23)
     endereco = Endereco("Sao Paulo", "Higienopolis", 1048)
     start_time = time.time() * 1000
-    # pessoaDict = {'Nome':pessoa.getNome(),'Idade':pessoa.getIdade()}
-    # enderecoDict = {'Cidade':endereco.getCidade(),'Rua':endereco.getRua(),'Numero':endereco.getNumero()}
     resultado = s.criaPessoa(pessoa, endereco)
     end_time = time.time() * 1000
     logs.write("Metodo: Inserir pessoa (objeto) no banco de dados\n")
     logs.write("Parametros: {},{}\n".format(pessoa, endereco))
+    logs.write("Resultado: {}\n".format(resultado))
+    logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
+
+    # Adiciona endereço na pessoa criada anteriormente
+    enderecoNovo = Endereco("Sao Paulo", "Arlindo Bettio", 1000)
+    start_time = time.time() * 1000
+    resultado = s.adicionaEndereco(enderecoNovo)
+    end_time = time.time() * 1000
+    logs.write("Metodo: Inserir pessoa (objeto) no banco de dados\n")
+    logs.write("Parametros: {}\n".format(endereco))
     logs.write("Resultado: {}\n".format(resultado))
     logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 
