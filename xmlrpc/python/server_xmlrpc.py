@@ -45,7 +45,7 @@ with SimpleXMLRPCServer(('localhost', 8000), requestHandler=RequestHandler, allo
             c.execute('INSERT INTO mora (id_pessoa,id_endereco) VALUES ({}, {})'.format(id_pessoa, id_endereco))
             hora = datetime.now()
             conn.commit()
-
+            c.close()
         except Exception:
             raise
 
@@ -63,7 +63,7 @@ with SimpleXMLRPCServer(('localhost', 8000), requestHandler=RequestHandler, allo
             c.execute('INSERT INTO mora (id_pessoa,id_endereco) VALUES ({}, {})'.format(id_pessoa, id_endereco))
             hora = datetime.now()
             conn.commit()
-
+            c.close()
         except Exception:
             raise
 

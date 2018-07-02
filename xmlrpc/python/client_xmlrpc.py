@@ -47,7 +47,7 @@ if __name__ == '__main__':
     # Maximizar Strings
     string = "a"
     i = 0
-    while(i < 10):
+    while(i <= 10):
         start_time = time.time() * 1000
         resultado = s.maximize(string)
         end_time = time.time() * 1000
