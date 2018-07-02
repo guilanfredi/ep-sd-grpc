@@ -39,6 +39,11 @@ class DelivererStub(object):
         request_serializer=simple__pb2.PessoaEndereco.SerializeToString,
         response_deserializer=simple__pb2.PessoaResposta.FromString,
         )
+    self.AddAddress = channel.unary_unary(
+        '/Deliverer/AddAddress',
+        request_serializer=simple__pb2.Endereco.SerializeToString,
+        response_deserializer=simple__pb2.PessoaResposta.FromString,
+        )
 
 
 class DelivererServicer(object):
@@ -78,8 +83,14 @@ class DelivererServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def ComplexObjectOperation(self, request, context):
-    """TODO
-    5) Operação que passa um tipo complexo e retorna outro tipo complexo
+    """5) Operação que passa um tipo complexo e retorna outro tipo complexo
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def AddAddress(self, request, context):
+    """Insere um endereço no banco de dados e retorna seu id e uma data
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
@@ -111,6 +122,11 @@ def add_DelivererServicer_to_server(servicer, server):
       'ComplexObjectOperation': grpc.unary_unary_rpc_method_handler(
           servicer.ComplexObjectOperation,
           request_deserializer=simple__pb2.PessoaEndereco.FromString,
+          response_serializer=simple__pb2.PessoaResposta.SerializeToString,
+      ),
+      'AddAddress': grpc.unary_unary_rpc_method_handler(
+          servicer.AddAddress,
+          request_deserializer=simple__pb2.Endereco.FromString,
           response_serializer=simple__pb2.PessoaResposta.SerializeToString,
       ),
   }

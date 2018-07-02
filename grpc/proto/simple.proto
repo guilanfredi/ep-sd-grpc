@@ -18,9 +18,11 @@ service Deliverer {
 	//operação com parâmetro string e valor de retorno string
 	rpc StringReplace(StringRequest) returns (StringResponse){}
 
-	//TODO
 	//5) Operação que passa um tipo complexo e retorna outro tipo complexo
 	rpc ComplexObjectOperation(PessoaEndereco) returns (PessoaResposta){}
+
+	// Insere um endereço no banco de dados e retorna seu id e uma data
+	rpc AddAddress(Endereco) returns (PessoaResposta){}
 }
 
 message Empty{}

@@ -1,7 +1,7 @@
 Metodo: Sem parametros e sem retorno
 Parametros: 
 Resultado: 
-Tempo de execucao: 1 ms
+Tempo de execucao: 0 ms
 
 Metodo: Soma dois longs
 Parametros: 922337203685477633 e 922337203685477634
@@ -11,7 +11,7 @@ Tempo de execucao: 1 ms
 Metodo: Soma oito longs
 Parametros: 922337203685477633, 922337203685477634, 922337203685477635, 922337203685477636, 922337203685477637, 922337203685477638, 922337203685477639, 922337203685477640
 Resultado: 7378697629483821092
-Tempo de execucao: 0 ms
+Tempo de execucao: 1 ms
 
 Metodo: String to uppercase
 Parametros: 'a' Tamanho: 1
@@ -69,8 +69,20 @@ nome: "Guilherme"
 idade: 23
 
 Resultado: 
-id_pessoa: 4
-hora: "2018-07-01 22:58:52"
+id_pessoa: 7
+hora: "2018-07-01 23:23:59"
+
+Tempo de execucao: 12 ms
+
+Metodo: Inserir endereco (objeto) no banco de dados
+Parametros: 
+cidade: "Sao Paulo"
+rua: "Maracas"
+numero: 121
+
+Resultado: 
+id_pessoa: 1
+hora: "2018-07-01 23:23:59"
 
 Tempo de execucao: 9 ms
 

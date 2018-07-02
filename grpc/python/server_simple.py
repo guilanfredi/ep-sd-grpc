@@ -48,12 +48,30 @@ class Deliverer(simple_pb2_grpc.DelivererServicer):
 			c.execute('INSERT INTO mora (id_pessoa,id_endereco) VALUES (?, ?)', [id_pessoa, id_endereco])
 			hora = datetime.now()
 			conn.commit()
+			c.close();
 		except Exception:
 			raise
 
 		resposta = simple_pb2.PessoaResposta(id_pessoa=id_pessoa, hora=hora.strftime("%Y-%m-%d %H:%M:%S"))
 		return resposta
 
+	def AddAddress(self, request, context):
+		try:
+			path = './database.db'
+			conn = sqlite3.connect(path)
+			c = conn.cursor()
+			id_pessoa = 1
+			c.execute('INSERT INTO enderecos(cidade, rua, numero) VALUES (?, ?, ?)',[request.cidade, request.rua, request.numero])
+			id_endereco = c.lastrowid
+			c.execute('INSERT INTO mora (id_pessoa,id_endereco) VALUES (?, ?)', [id_pessoa, id_endereco])
+			hora = datetime.now()
+			conn.commit()
+			c.close()
+		except Exception:
+			raise
+
+		resposta = simple_pb2.PessoaResposta(id_pessoa=id_pessoa, hora=hora.strftime("%Y-%m-%d %H:%M:%S"))
+		return resposta
 
 
 def serve():

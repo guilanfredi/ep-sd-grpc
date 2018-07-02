@@ -96,6 +96,16 @@ def run():
 	logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 
 
+	enderecoNovo = simple_pb2.Endereco(cidade="Sao Paulo", rua="Arlindo Bettio", numero=1000)
+	start_time = time.time() * 1000
+	resultado = stub.AddAddress(enderecoNovo)
+	end_time = time.time() * 1000
+	logs.write("Metodo: Inserir endereco (objeto) no banco de dados\n")
+	logs.write("Parametros: \n{}\n".format(endereco))
+	logs.write("Resultado: \n{}\n".format(resultado))
+	logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
+
+
 	logs.close()
 
 if __name__ == '__main__':
