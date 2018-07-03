@@ -1,0 +1,80 @@
+Metodo: Sem parametros e sem retorno
+Parametros: Nenhum
+Resultado: Sem resultado
+Tempo de execucao: 15 ms
+
+Metodo: Duplicar um Long
+Parametros: 922337203685477633
+Resultado: 1844674407370955266
+Tempo de execucao: 0 ms
+
+Metodo: Soma de oito Longs
+Parametros: 922337203685477633,922337203685477634,922337203685477635,922337203685477636,922337203685477637,922337203685477638,922337203685477639,922337203685477640
+Resultado: 7378697629483821092
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'a' Tamanho: 1
+Resultado: 'A' Tamanho: 1
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa' Tamanho: 2
+Resultado: 'AA' Tamanho: 2
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 4
+Resultado: 'AA...' Tamanho: 4
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 8
+Resultado: 'AA...' Tamanho: 8
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 16
+Resultado: 'AA...' Tamanho: 16
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 32
+Resultado: 'AA...' Tamanho: 32
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 64
+Resultado: 'AA...' Tamanho: 64
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 128
+Resultado: 'AA...' Tamanho: 128
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 256
+Resultado: 'AA...' Tamanho: 256
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 512
+Resultado: 'AA...' Tamanho: 512
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 1024
+Resultado: 'AA...' Tamanho: 1024
+Tempo de execucao: 0 ms
+
+Metodo: Inserir pessoa (objeto) no banco de dados
+Parametros: <objetos.Pessoa object at 0x00000299AAAECFD0>,<objetos.Endereco object at 0x00000299AAAFC080>
+Resultado: {'id': 1, 'hora': <DateTime '20180702T21:23:14' at 0x299aab0abe0>}
+Tempo de execucao: 906 ms
+
+Metodo: Inserir endereco (objeto) no banco de dados
+Parametros: <objetos.Endereco object at 0x00000299AAAFC080>
+Resultado: {'id': 2, 'hora': <DateTime '20180702T21:23:15' at 0x299aab0acc0>}
+Tempo de execucao: 218 ms
+
