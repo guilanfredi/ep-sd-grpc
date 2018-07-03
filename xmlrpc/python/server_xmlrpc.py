@@ -11,7 +11,7 @@ class RequestHandler(SimpleXMLRPCRequestHandler):
 
 
 # Criando o servidor
-with SimpleXMLRPCServer(('localhost', 8000), requestHandler=RequestHandler, allow_none=True) as server:
+with SimpleXMLRPCServer(('192.168.1.116', 8000), requestHandler=RequestHandler, allow_none=True) as server:
 
     def void_function():
         a = 2 + 3
