@@ -81,7 +81,7 @@ if __name__ == '__main__':
     start_time = time.time() * 1000
     resultado = s.adicionaEndereco(enderecoNovo)
     end_time = time.time() * 1000
-    logs.write("Metodo: Inserir endereco novo para pessoa criada anteriormente\n")
+    logs.write("Metodo: Inserir endereco (objeto) no banco de dados\n")
     logs.write("Parametros: {}\n".format(endereco))
     logs.write("Resultado: {}\n".format(resultado))
     logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
