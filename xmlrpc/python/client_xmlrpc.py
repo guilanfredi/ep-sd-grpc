@@ -7,7 +7,7 @@ from objetos import Pessoa, Endereco, Resposta
 if __name__ == '__main__':
 
     logs = open("logs.txt", "w")
-    s = xmlrpc.client.ServerProxy('http://localhost:8000')\
+    s = xmlrpc.client.ServerProxy('http://192.168.1.116:8000')\
 
     # Vazio
     start_time = time.time() * 1000
