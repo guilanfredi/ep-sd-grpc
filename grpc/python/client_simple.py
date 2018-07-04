@@ -13,7 +13,7 @@ from objetos import Pessoa, Endereco
 
 def run():
 	
-	channel = grpc.insecure_channel('localhost:50051')
+	channel = grpc.insecure_channel('192.168.1.116:50051')
 	stub = simple_pb2_grpc.DelivererStub(channel)
 
 	num1 = math.floor(sys.maxsize / 10)+1
