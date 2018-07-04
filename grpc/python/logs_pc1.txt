@@ -1,0 +1,88 @@
+Metodo: Sem parametros e sem retorno
+Parametros: 
+Resultado: 
+Tempo de execucao: 0 ms
+
+Metodo: Soma dois longs
+Parametros: 922337203685477633 e 922337203685477634
+Resultado: 1844674407370955267
+Tempo de execucao: 0 ms
+
+Metodo: Soma oito longs
+Parametros: 922337203685477633, 922337203685477634, 922337203685477635, 922337203685477636, 922337203685477637, 922337203685477638, 922337203685477639, 922337203685477640
+Resultado: 7378697629483821092
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'a' Tamanho: 1
+Resultado: 'A' Tamanho: 1
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa' Tamanho: 2
+Resultado: 'AA' Tamanho: 2
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 4
+Resultado: 'AA...' Tamanho: 4
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 8
+Resultado: 'AA...' Tamanho: 8
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 16
+Resultado: 'AA...' Tamanho: 16
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 32
+Resultado: 'AA...' Tamanho: 32
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 64
+Resultado: 'AA...' Tamanho: 64
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 128
+Resultado: 'AA...' Tamanho: 128
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 256
+Resultado: 'AA...' Tamanho: 256
+Tempo de execucao: 0 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 512
+Resultado: 'AA...' Tamanho: 512
+Tempo de execucao: 0 ms
+
+Metodo: Inserir pessoa (objeto) no banco de dados
+Parametros: 
+nome: "Guilherme"
+idade: 23
+
+Resultado: 
+id_pessoa: 1
+hora: "2018-07-03 22:49:15"
+
+Tempo de execucao: 1124 ms
+
+Metodo: Inserir endereco (objeto) no banco de dados
+Parametros: 
+cidade: "Sao Paulo"
+rua: "Maracas"
+numero: 121
+
+Resultado: 
+id_pessoa: 1
+hora: "2018-07-03 22:49:16"
+
+Tempo de execucao: 249 ms
+
