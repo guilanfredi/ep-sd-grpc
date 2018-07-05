@@ -8,7 +8,7 @@ service Deliverer {
 
 	//2)
 	//operação com um long de parâmetro e retorna um long
-	rpc SumLong(SumLongRequest) returns (SumLongResponse){}
+	rpc DupLong(SumLongRequest) returns (SumLongResponse){}
 
 	//3)
 	//operação com um 8 valores long de parâmetro e retorna um long
@@ -29,7 +29,6 @@ message Empty{}
 
 message SumLongRequest {
 	int64 a = 1;
-	int64 b = 2;
 }
 
 message SumLongResponse {

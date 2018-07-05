@@ -19,8 +19,8 @@ class DelivererStub(object):
         request_serializer=simple__pb2.Empty.SerializeToString,
         response_deserializer=simple__pb2.Empty.FromString,
         )
-    self.SumLong = channel.unary_unary(
-        '/Deliverer/SumLong',
+    self.DupLong = channel.unary_unary(
+        '/Deliverer/DupLong',
         request_serializer=simple__pb2.SumLongRequest.SerializeToString,
         response_deserializer=simple__pb2.SumLongResponse.FromString,
         )
@@ -58,7 +58,7 @@ class DelivererServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def SumLong(self, request, context):
+  def DupLong(self, request, context):
     """2)
     operação com um long de parâmetro e retorna um long
     """
@@ -104,8 +104,8 @@ def add_DelivererServicer_to_server(servicer, server):
           request_deserializer=simple__pb2.Empty.FromString,
           response_serializer=simple__pb2.Empty.SerializeToString,
       ),
-      'SumLong': grpc.unary_unary_rpc_method_handler(
-          servicer.SumLong,
+      'DupLong': grpc.unary_unary_rpc_method_handler(
+          servicer.DupLong,
           request_deserializer=simple__pb2.SumLongRequest.FromString,
           response_serializer=simple__pb2.SumLongResponse.SerializeToString,
       ),

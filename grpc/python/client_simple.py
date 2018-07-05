@@ -13,7 +13,7 @@ from objetos import Pessoa, Endereco
 
 def run():
 	
-	channel = grpc.insecure_channel('192.168.1.116:50051')
+	channel = grpc.insecure_channel('localhost:50051')
 	stub = simple_pb2_grpc.DelivererStub(channel)
 
 	num1 = math.floor(sys.maxsize / 10)+1
@@ -44,10 +44,10 @@ def run():
 
 
 	start_time = time.time() * 1000
-	response = stub.SumLong(simple_pb2.SumLongRequest(a=num1, b=num2))
+	response = stub.DupLong(simple_pb2.SumLongRequest(a=num1))
 	end_time = time.time() * 1000
-	logs.write("Metodo: Soma dois longs\n")
-	logs.write("Parametros: {} e {}\n".format(num1,num2))
+	logs.write("Metodo: Duplica um long\n")
+	logs.write("Parametros: {}\n".format(num1))
 	logs.write("Resultado: {}\n".format(response.result))
 	logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='simple.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x0csimple.proto\"\x07\n\x05\x45mpty\"&\n\x0eSumLongRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\"!\n\x0fSumLongResponse\x12\x0e\n\x06result\x18\x01 \x01(\x03\"n\n\x14SumEightLongsRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\x03\x12\t\n\x01\x64\x18\x04 \x01(\x03\x12\t\n\x01\x65\x18\x05 \x01(\x03\x12\t\n\x01\x66\x18\x06 \x01(\x03\x12\t\n\x01g\x18\x07 \x01(\x03\x12\t\n\x01h\x18\x08 \x01(\x03\"\x1a\n\rStringRequest\x12\t\n\x01\x61\x18\x01 \x01(\t\" \n\x0eStringResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"E\n\x0ePessoaEndereco\x12\x17\n\x06person\x18\x01 \x01(\x0b\x32\x07.Pessoa\x12\x1a\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32\t.Endereco\"7\n\x08\x45ndereco\x12\x0e\n\x06\x63idade\x18\x01 \x01(\t\x12\x0b\n\x03rua\x18\x02 \x01(\t\x12\x0e\n\x06numero\x18\x03 \x01(\x05\"%\n\x06Pessoa\x12\x0c\n\x04nome\x18\x01 \x01(\t\x12\r\n\x05idade\x18\x02 \x01(\x05\"1\n\x0ePessoaResposta\x12\x11\n\tid_pessoa\x18\x01 \x01(\x05\x12\x0c\n\x04hora\x18\x02 \x01(\t2\xb7\x02\n\tDeliverer\x12 \n\x0cVoidOnServer\x12\x06.Empty\x1a\x06.Empty\"\x00\x12.\n\x07SumLong\x12\x0f.SumLongRequest\x1a\x10.SumLongResponse\"\x00\x12:\n\rSumEightLongs\x12\x15.SumEightLongsRequest\x1a\x10.SumLongResponse\"\x00\x12\x32\n\rStringReplace\x12\x0e.StringRequest\x1a\x0f.StringResponse\"\x00\x12<\n\x16\x43omplexObjectOperation\x12\x0f.PessoaEndereco\x1a\x0f.PessoaResposta\"\x00\x12*\n\nAddAddress\x12\t.Endereco\x1a\x0f.PessoaResposta\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0csimple.proto\"\x07\n\x05\x45mpty\"\x1b\n\x0eSumLongRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\"!\n\x0fSumLongResponse\x12\x0e\n\x06result\x18\x01 \x01(\x03\"n\n\x14SumEightLongsRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\x03\x12\t\n\x01\x64\x18\x04 \x01(\x03\x12\t\n\x01\x65\x18\x05 \x01(\x03\x12\t\n\x01\x66\x18\x06 \x01(\x03\x12\t\n\x01g\x18\x07 \x01(\x03\x12\t\n\x01h\x18\x08 \x01(\x03\"\x1a\n\rStringRequest\x12\t\n\x01\x61\x18\x01 \x01(\t\" \n\x0eStringResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"E\n\x0ePessoaEndereco\x12\x17\n\x06person\x18\x01 \x01(\x0b\x32\x07.Pessoa\x12\x1a\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32\t.Endereco\"7\n\x08\x45ndereco\x12\x0e\n\x06\x63idade\x18\x01 \x01(\t\x12\x0b\n\x03rua\x18\x02 \x01(\t\x12\x0e\n\x06numero\x18\x03 \x01(\x05\"%\n\x06Pessoa\x12\x0c\n\x04nome\x18\x01 \x01(\t\x12\r\n\x05idade\x18\x02 \x01(\x05\"1\n\x0ePessoaResposta\x12\x11\n\tid_pessoa\x18\x01 \x01(\x05\x12\x0c\n\x04hora\x18\x02 \x01(\t2\xb7\x02\n\tDeliverer\x12 \n\x0cVoidOnServer\x12\x06.Empty\x1a\x06.Empty\"\x00\x12.\n\x07\x44upLong\x12\x0f.SumLongRequest\x1a\x10.SumLongResponse\"\x00\x12:\n\rSumEightLongs\x12\x15.SumEightLongsRequest\x1a\x10.SumLongResponse\"\x00\x12\x32\n\rStringReplace\x12\x0e.StringRequest\x1a\x0f.StringResponse\"\x00\x12<\n\x16\x43omplexObjectOperation\x12\x0f.PessoaEndereco\x1a\x0f.PessoaResposta\"\x00\x12*\n\nAddAddress\x12\t.Endereco\x1a\x0f.PessoaResposta\"\x00\x62\x06proto3')
 )
 
 
@@ -63,13 +63,6 @@ _SUMLONGREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='b', full_name='SumLongRequest.b', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -83,7 +76,7 @@ _SUMLONGREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=25,
-  serialized_end=63,
+  serialized_end=52,
 )
 
 
@@ -113,8 +106,8 @@ _SUMLONGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=65,
-  serialized_end=98,
+  serialized_start=54,
+  serialized_end=87,
 )
 
 
@@ -193,8 +186,8 @@ _SUMEIGHTLONGSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=100,
-  serialized_end=210,
+  serialized_start=89,
+  serialized_end=199,
 )
 
 
@@ -224,8 +217,8 @@ _STRINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=212,
-  serialized_end=238,
+  serialized_start=201,
+  serialized_end=227,
 )
 
 
@@ -255,8 +248,8 @@ _STRINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=240,
-  serialized_end=272,
+  serialized_start=229,
+  serialized_end=261,
 )
 
 
@@ -293,8 +286,8 @@ _PESSOAENDERECO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=274,
-  serialized_end=343,
+  serialized_start=263,
+  serialized_end=332,
 )
 
 
@@ -338,8 +331,8 @@ _ENDERECO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=345,
-  serialized_end=400,
+  serialized_start=334,
+  serialized_end=389,
 )
 
 
@@ -376,8 +369,8 @@ _PESSOA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=402,
-  serialized_end=439,
+  serialized_start=391,
+  serialized_end=428,
 )
 
 
@@ -414,8 +407,8 @@ _PESSOARESPOSTA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=441,
-  serialized_end=490,
+  serialized_start=430,
+  serialized_end=479,
 )
 
 _PESSOAENDERECO.fields_by_name['person'].message_type = _PESSOA
@@ -510,8 +503,8 @@ _DELIVERER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=493,
-  serialized_end=804,
+  serialized_start=482,
+  serialized_end=793,
   methods=[
   _descriptor.MethodDescriptor(
     name='VoidOnServer',
@@ -523,8 +516,8 @@ _DELIVERER = _descriptor.ServiceDescriptor(
     options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='SumLong',
-    full_name='Deliverer.SumLong',
+    name='DupLong',
+    full_name='Deliverer.DupLong',
     index=1,
     containing_service=None,
     input_type=_SUMLONGREQUEST,

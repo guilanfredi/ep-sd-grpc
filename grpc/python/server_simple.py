@@ -17,8 +17,8 @@ class Deliverer(simple_pb2_grpc.DelivererServicer):
 		aux = 2 + 3
 		return simple_pb2.Empty()
 	
-	def SumLong(self, request, context):
-		aux = request.a + request.b
+	def DupLong(self, request, context):
+		aux = request.a * 2
 		return simple_pb2.SumLongResponse(result=aux)
 	
 	def SumEightLongs(self, request, context):
