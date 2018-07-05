@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='simple.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x0csimple.proto\"\x07\n\x05\x45mpty\"\x1b\n\x0eSumLongRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\"!\n\x0fSumLongResponse\x12\x0e\n\x06result\x18\x01 \x01(\x03\"n\n\x14SumEightLongsRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\x03\x12\t\n\x01\x64\x18\x04 \x01(\x03\x12\t\n\x01\x65\x18\x05 \x01(\x03\x12\t\n\x01\x66\x18\x06 \x01(\x03\x12\t\n\x01g\x18\x07 \x01(\x03\x12\t\n\x01h\x18\x08 \x01(\x03\"\x1a\n\rStringRequest\x12\t\n\x01\x61\x18\x01 \x01(\t\" \n\x0eStringResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"E\n\x0ePessoaEndereco\x12\x17\n\x06person\x18\x01 \x01(\x0b\x32\x07.Pessoa\x12\x1a\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32\t.Endereco\"7\n\x08\x45ndereco\x12\x0e\n\x06\x63idade\x18\x01 \x01(\t\x12\x0b\n\x03rua\x18\x02 \x01(\t\x12\x0e\n\x06numero\x18\x03 \x01(\x05\"%\n\x06Pessoa\x12\x0c\n\x04nome\x18\x01 \x01(\t\x12\r\n\x05idade\x18\x02 \x01(\x05\"1\n\x0ePessoaResposta\x12\x11\n\tid_pessoa\x18\x01 \x01(\x05\x12\x0c\n\x04hora\x18\x02 \x01(\t2\xb7\x02\n\tDeliverer\x12 \n\x0cVoidOnServer\x12\x06.Empty\x1a\x06.Empty\"\x00\x12.\n\x07\x44upLong\x12\x0f.SumLongRequest\x1a\x10.SumLongResponse\"\x00\x12:\n\rSumEightLongs\x12\x15.SumEightLongsRequest\x1a\x10.SumLongResponse\"\x00\x12\x32\n\rStringReplace\x12\x0e.StringRequest\x1a\x0f.StringResponse\"\x00\x12<\n\x16\x43omplexObjectOperation\x12\x0f.PessoaEndereco\x1a\x0f.PessoaResposta\"\x00\x12*\n\nAddAddress\x12\t.Endereco\x1a\x0f.PessoaResposta\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0csimple.proto\"\x07\n\x05\x45mpty\"\x1b\n\x0eSumLongRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\"!\n\x0fSumLongResponse\x12\x0e\n\x06result\x18\x01 \x01(\x03\"n\n\x14SumEightLongsRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\x03\x12\t\n\x01\x64\x18\x04 \x01(\x03\x12\t\n\x01\x65\x18\x05 \x01(\x03\x12\t\n\x01\x66\x18\x06 \x01(\x03\x12\t\n\x01g\x18\x07 \x01(\x03\x12\t\n\x01h\x18\x08 \x01(\x03\"\x1a\n\rStringRequest\x12\t\n\x01\x61\x18\x01 \x01(\t\" \n\x0eStringResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"E\n\x0ePessoaEndereco\x12\x17\n\x06person\x18\x01 \x01(\x0b\x32\x07.Pessoa\x12\x1a\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32\t.Endereco\"7\n\x08\x45ndereco\x12\x0e\n\x06\x63idade\x18\x01 \x01(\t\x12\x0b\n\x03rua\x18\x02 \x01(\t\x12\x0e\n\x06numero\x18\x03 \x01(\x05\"%\n\x06Pessoa\x12\x0c\n\x04nome\x18\x01 \x01(\t\x12\r\n\x05idade\x18\x02 \x01(\x05\"1\n\x0ePessoaResposta\x12\x11\n\tid_pessoa\x18\x01 \x01(\x05\x12\x0c\n\x04hora\x18\x02 \x01(\t2\xc8\x02\n\tDeliverer\x12!\n\rvoid_function\x12\x06.Empty\x1a\x06.Empty\"\x00\x12\x39\n\x12\x64uplicate_function\x12\x0f.SumLongRequest\x1a\x10.SumLongResponse\"\x00\x12;\n\x0e\x61\x64\x64\x65r_function\x12\x15.SumEightLongsRequest\x1a\x10.SumLongResponse\"\x00\x12<\n\x17maximizeString_function\x12\x0e.StringRequest\x1a\x0f.StringResponse\"\x00\x12\x30\n\ncriaPessoa\x12\x0f.PessoaEndereco\x1a\x0f.PessoaResposta\"\x00\x12\x30\n\x10\x61\x64icionaEndereco\x12\t.Endereco\x1a\x0f.PessoaResposta\"\x00\x62\x06proto3')
 )
 
 
@@ -504,11 +504,11 @@ _DELIVERER = _descriptor.ServiceDescriptor(
   index=0,
   options=None,
   serialized_start=482,
-  serialized_end=793,
+  serialized_end=810,
   methods=[
   _descriptor.MethodDescriptor(
-    name='VoidOnServer',
-    full_name='Deliverer.VoidOnServer',
+    name='void_function',
+    full_name='Deliverer.void_function',
     index=0,
     containing_service=None,
     input_type=_EMPTY,
@@ -516,8 +516,8 @@ _DELIVERER = _descriptor.ServiceDescriptor(
     options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='DupLong',
-    full_name='Deliverer.DupLong',
+    name='duplicate_function',
+    full_name='Deliverer.duplicate_function',
     index=1,
     containing_service=None,
     input_type=_SUMLONGREQUEST,
@@ -525,8 +525,8 @@ _DELIVERER = _descriptor.ServiceDescriptor(
     options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='SumEightLongs',
-    full_name='Deliverer.SumEightLongs',
+    name='adder_function',
+    full_name='Deliverer.adder_function',
     index=2,
     containing_service=None,
     input_type=_SUMEIGHTLONGSREQUEST,
@@ -534,8 +534,8 @@ _DELIVERER = _descriptor.ServiceDescriptor(
     options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='StringReplace',
-    full_name='Deliverer.StringReplace',
+    name='maximizeString_function',
+    full_name='Deliverer.maximizeString_function',
     index=3,
     containing_service=None,
     input_type=_STRINGREQUEST,
@@ -543,8 +543,8 @@ _DELIVERER = _descriptor.ServiceDescriptor(
     options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='ComplexObjectOperation',
-    full_name='Deliverer.ComplexObjectOperation',
+    name='criaPessoa',
+    full_name='Deliverer.criaPessoa',
     index=4,
     containing_service=None,
     input_type=_PESSOAENDERECO,
@@ -552,8 +552,8 @@ _DELIVERER = _descriptor.ServiceDescriptor(
     options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='AddAddress',
-    full_name='Deliverer.AddAddress',
+    name='adicionaEndereco',
+    full_name='Deliverer.adicionaEndereco',
     index=5,
     containing_service=None,
     input_type=_ENDERECO,

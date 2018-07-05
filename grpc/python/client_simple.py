@@ -29,12 +29,12 @@ def run():
 	response = 0
 
 
-	stub.VoidOnServer(simple_pb2.Empty())
+	stub.void_function(simple_pb2.Empty())
 
 	logs = open("logs.txt", "w")
 
 	start_time = time.time() * 1000
-	stub.VoidOnServer(simple_pb2.Empty())
+	stub.void_function(simple_pb2.Empty())
 	end_time = time.time() * 1000
 	logs.write("Metodo: Sem parametros e sem retorno\n")
 	logs.write("Parametros: \n")
@@ -44,7 +44,7 @@ def run():
 
 
 	start_time = time.time() * 1000
-	response = stub.DupLong(simple_pb2.SumLongRequest(a=num1))
+	response = stub.duplicate_function(simple_pb2.SumLongRequest(a=num1))
 	end_time = time.time() * 1000
 	logs.write("Metodo: Duplica um long\n")
 	logs.write("Parametros: {}\n".format(num1))
@@ -54,7 +54,7 @@ def run():
 
 
 	start_time = time.time() * 1000
-	response = stub.SumEightLongs(simple_pb2.SumEightLongsRequest(a=num1, b=num2, c=num3, d=num4, e=num5, f=num6, g=num7, h=num8))
+	response = stub.adder_function(simple_pb2.SumEightLongsRequest(a=num1, b=num2, c=num3, d=num4, e=num5, f=num6, g=num7, h=num8))
 	end_time = time.time() * 1000
 	logs.write("Metodo: Soma oito longs\n")
 	logs.write("Parametros: {}, {}, {}, {}, {}, {}, {}, {}\n".format(num1,num2,num3,num4,num5,num6,num7,num8))
@@ -68,7 +68,7 @@ def run():
 	while(i < 10):
 		
 		start_time = time.time() * 1000
-		response = stub.StringReplace(simple_pb2.StringRequest(a=firstString))
+		response = stub.maximizeString_function(simple_pb2.StringRequest(a=firstString))
 		end_time = time.time() * 1000
 		logs.write("Metodo: String to uppercase\n")
 
@@ -88,7 +88,7 @@ def run():
 	pessoa = simple_pb2.Pessoa(nome="Guilherme", idade=23)
 	endereco = simple_pb2.Endereco(cidade="Sao Paulo", rua="Maracas", numero=121)
 	start_time = time.time() * 1000
-	resultado = stub.ComplexObjectOperation(simple_pb2.PessoaEndereco(person=pessoa, address=endereco))
+	resultado = stub.criaPessoa(simple_pb2.PessoaEndereco(person=pessoa, address=endereco))
 	end_time = time.time() * 1000
 	logs.write("Metodo: Inserir pessoa (objeto) no banco de dados\n")
 	logs.write("Parametros: \n{}\n".format(pessoa, endereco))
@@ -98,7 +98,7 @@ def run():
 
 	enderecoNovo = simple_pb2.Endereco(cidade="Sao Paulo", rua="Arlindo Bettio", numero=1000)
 	start_time = time.time() * 1000
-	resultado = stub.AddAddress(enderecoNovo)
+	resultado = stub.adicionaEndereco(enderecoNovo)
 	end_time = time.time() * 1000
 	logs.write("Metodo: Inserir endereco (objeto) no banco de dados\n")
 	logs.write("Parametros: \n{}\n".format(endereco))

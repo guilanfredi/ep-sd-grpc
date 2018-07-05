@@ -6,7 +6,7 @@ Tempo de execucao: 1 ms
 Metodo: Duplica um long
 Parametros: 922337203685477633
 Resultado: 1844674407370955266
-Tempo de execucao: 1 ms
+Tempo de execucao: 2 ms
 
 Metodo: Soma oito longs
 Parametros: 922337203685477633, 922337203685477634, 922337203685477635, 922337203685477636, 922337203685477637, 922337203685477638, 922337203685477639, 922337203685477640
@@ -16,12 +16,12 @@ Tempo de execucao: 0 ms
 Metodo: String to uppercase
 Parametros: 'a' Tamanho: 1
 Resultado: 'A' Tamanho: 1
-Tempo de execucao: 1 ms
+Tempo de execucao: 0 ms
 
 Metodo: String to uppercase
 Parametros: 'aa' Tamanho: 2
 Resultado: 'AA' Tamanho: 2
-Tempo de execucao: 0 ms
+Tempo de execucao: 1 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 4
@@ -31,12 +31,12 @@ Tempo de execucao: 1 ms
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 8
 Resultado: 'AA...' Tamanho: 8
-Tempo de execucao: 0 ms
+Tempo de execucao: 1 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 16
 Resultado: 'AA...' Tamanho: 16
-Tempo de execucao: 0 ms
+Tempo de execucao: 1 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 32
@@ -61,7 +61,7 @@ Tempo de execucao: 0 ms
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 512
 Resultado: 'AA...' Tamanho: 512
-Tempo de execucao: 1 ms
+Tempo de execucao: 0 ms
 
 Metodo: Inserir pessoa (objeto) no banco de dados
 Parametros: 
@@ -69,10 +69,10 @@ nome: "Guilherme"
 idade: 23
 
 Resultado: 
-id_pessoa: 3
-hora: "2018-07-04 23:52:22"
+id_pessoa: 4
+hora: "2018-07-04 23:59:40"
 
-Tempo de execucao: 9 ms
+Tempo de execucao: 13 ms
 
 Metodo: Inserir endereco (objeto) no banco de dados
 Parametros: 
@@ -82,7 +82,7 @@ numero: 121
 
 Resultado: 
 id_pessoa: 1
-hora: "2018-07-04 23:52:22"
+hora: "2018-07-04 23:59:40"
 
-Tempo de execucao: 9 ms
+Tempo de execucao: 8 ms
 

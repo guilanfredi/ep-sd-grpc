@@ -4,25 +4,25 @@ service Deliverer {
 	
 	//1)
 	//operação sem parâmetros e sem valor de retorno
-	rpc VoidOnServer (Empty) returns (Empty) {}
+	rpc void_function (Empty) returns (Empty) {}
 
 	//2)
 	//operação com um long de parâmetro e retorna um long
-	rpc DupLong(SumLongRequest) returns (SumLongResponse){}
+	rpc duplicate_function(SumLongRequest) returns (SumLongResponse){}
 
 	//3)
 	//operação com um 8 valores long de parâmetro e retorna um long
-	rpc SumEightLongs(SumEightLongsRequest) returns (SumLongResponse){}
+	rpc adder_function(SumEightLongsRequest) returns (SumLongResponse){}
 
 	//4)
 	//operação com parâmetro string e valor de retorno string
-	rpc StringReplace(StringRequest) returns (StringResponse){}
+	rpc maximizeString_function(StringRequest) returns (StringResponse){}
 
 	//5) Operação que passa um tipo complexo e retorna outro tipo complexo
-	rpc ComplexObjectOperation(PessoaEndereco) returns (PessoaResposta){}
+	rpc criaPessoa(PessoaEndereco) returns (PessoaResposta){}
 
 	// Insere um endereço no banco de dados e retorna seu id e uma data
-	rpc AddAddress(Endereco) returns (PessoaResposta){}
+	rpc adicionaEndereco(Endereco) returns (PessoaResposta){}
 }
 
 message Empty{}
