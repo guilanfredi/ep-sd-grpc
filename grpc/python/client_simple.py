@@ -29,8 +29,6 @@ def run():
 	response = 0
 
 
-	stub.void_function(simple_pb2.Empty())
-
 	logs = open("logs.txt", "w")
 
 	start_time = time.time() * 1000
