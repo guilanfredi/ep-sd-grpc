@@ -1,6 +1,6 @@
 from xmlrpc.server import SimpleXMLRPCServer
 from xmlrpc.server import SimpleXMLRPCRequestHandler
-from objetos import Pessoa, Endereco, Resposta
+from objetos import Pessoa, Endereco, Resposta, Retangulo
 import sqlite3
 import time
 from datetime import datetime
@@ -70,6 +70,9 @@ with SimpleXMLRPCServer(('192.168.1.116', 8000), requestHandler=RequestHandler, 
         resposta = Resposta(id_endereco, hora)
         return resposta
 
+    def esticaRetangulo(retangulo):
+        return Retangulo(retangulo['base'] * 2, retangulo['altura'])
+
     # Registrando as funcoes
     server.register_function(adder_function, 'add')
     server.register_function(duplicate_function, 'dup')
@@ -77,6 +80,7 @@ with SimpleXMLRPCServer(('192.168.1.116', 8000), requestHandler=RequestHandler, 
     server.register_function(maximizeString_function, 'maximize')
     server.register_function(criaPessoa, 'criaPessoa')
     server.register_function(adicionaEndereco, 'adicionaEndereco')
+    server.register_function(esticaRetangulo, 'esticaRetangulo')
 
     # Rodando o servidor
     server.serve_forever()

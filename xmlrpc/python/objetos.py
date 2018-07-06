@@ -30,3 +30,8 @@ class Resposta(object):
     def __init__(self, id_retorno, hora):
         self.id = id_retorno
         self.hora = hora
+
+class Retangulo(object):
+    def __init__(self, base, altura):
+        self.base = base
+        self.altura = altura

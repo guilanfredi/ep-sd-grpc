@@ -2,7 +2,7 @@ import xmlrpc.client
 import time
 import math
 import sys
-from objetos import Pessoa, Endereco, Resposta
+from objetos import Pessoa, Endereco, Resposta, Retangulo
 
 if __name__ == '__main__':
 
@@ -83,6 +83,16 @@ if __name__ == '__main__':
     end_time = time.time() * 1000
     logs.write("Metodo: Inserir endereco (objeto) no banco de dados\n")
     logs.write("Parametros: {}\n".format(endereco))
+    logs.write("Resultado: {}\n".format(resultado))
+    logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
+
+    # Adiciona endereço na pessoa criada anteriormente
+    retangulo = Retangulo(15, 10)
+    start_time = time.time() * 1000
+    resultado = s.esticaRetangulo(retangulo)
+    end_time = time.time() * 1000
+    logs.write("Metodo: Esticar retangulo (objeto)\n")
+    logs.write("Parametros: {}\n".format(retangulo))
     logs.write("Resultado: {}\n".format(resultado))
     logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 
