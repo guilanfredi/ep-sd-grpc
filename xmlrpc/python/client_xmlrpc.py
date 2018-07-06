@@ -86,7 +86,7 @@ if __name__ == '__main__':
     logs.write("Resultado: {}\n".format(resultado))
     logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 
-    # Adiciona endereço na pessoa criada anteriormente
+    # Estica o retangulo
     retangulo = Retangulo(15, 10)
     start_time = time.time() * 1000
     resultado = s.esticaRetangulo(retangulo)
