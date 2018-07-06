@@ -14,33 +14,33 @@ class DelivererStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.VoidOnServer = channel.unary_unary(
-        '/Deliverer/VoidOnServer',
+    self.void_function = channel.unary_unary(
+        '/Deliverer/void_function',
         request_serializer=simple__pb2.Empty.SerializeToString,
         response_deserializer=simple__pb2.Empty.FromString,
         )
-    self.SumLong = channel.unary_unary(
-        '/Deliverer/SumLong',
+    self.duplicate_function = channel.unary_unary(
+        '/Deliverer/duplicate_function',
         request_serializer=simple__pb2.SumLongRequest.SerializeToString,
         response_deserializer=simple__pb2.SumLongResponse.FromString,
         )
-    self.SumEightLongs = channel.unary_unary(
-        '/Deliverer/SumEightLongs',
+    self.adder_function = channel.unary_unary(
+        '/Deliverer/adder_function',
         request_serializer=simple__pb2.SumEightLongsRequest.SerializeToString,
         response_deserializer=simple__pb2.SumLongResponse.FromString,
         )
-    self.StringReplace = channel.unary_unary(
-        '/Deliverer/StringReplace',
+    self.maximizeString_function = channel.unary_unary(
+        '/Deliverer/maximizeString_function',
         request_serializer=simple__pb2.StringRequest.SerializeToString,
         response_deserializer=simple__pb2.StringResponse.FromString,
         )
-    self.ComplexObjectOperation = channel.unary_unary(
-        '/Deliverer/ComplexObjectOperation',
+    self.criaPessoa = channel.unary_unary(
+        '/Deliverer/criaPessoa',
         request_serializer=simple__pb2.PessoaEndereco.SerializeToString,
         response_deserializer=simple__pb2.PessoaResposta.FromString,
         )
-    self.AddAddress = channel.unary_unary(
-        '/Deliverer/AddAddress',
+    self.adicionaEndereco = channel.unary_unary(
+        '/Deliverer/adicionaEndereco',
         request_serializer=simple__pb2.Endereco.SerializeToString,
         response_deserializer=simple__pb2.PessoaResposta.FromString,
         )
@@ -50,7 +50,7 @@ class DelivererServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def VoidOnServer(self, request, context):
+  def void_function(self, request, context):
     """1)
     operação sem parâmetros e sem valor de retorno
     """
@@ -58,7 +58,7 @@ class DelivererServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def SumLong(self, request, context):
+  def duplicate_function(self, request, context):
     """2)
     operação com um long de parâmetro e retorna um long
     """
@@ -66,7 +66,7 @@ class DelivererServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def SumEightLongs(self, request, context):
+  def adder_function(self, request, context):
     """3)
     operação com um 8 valores long de parâmetro e retorna um long
     """
@@ -74,7 +74,7 @@ class DelivererServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def StringReplace(self, request, context):
+  def maximizeString_function(self, request, context):
     """4)
     operação com parâmetro string e valor de retorno string
     """
@@ -82,14 +82,14 @@ class DelivererServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def ComplexObjectOperation(self, request, context):
+  def criaPessoa(self, request, context):
     """5) Operação que passa um tipo complexo e retorna outro tipo complexo
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def AddAddress(self, request, context):
+  def adicionaEndereco(self, request, context):
     """Insere um endereço no banco de dados e retorna seu id e uma data
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -99,33 +99,33 @@ class DelivererServicer(object):
 
 def add_DelivererServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'VoidOnServer': grpc.unary_unary_rpc_method_handler(
-          servicer.VoidOnServer,
+      'void_function': grpc.unary_unary_rpc_method_handler(
+          servicer.void_function,
           request_deserializer=simple__pb2.Empty.FromString,
           response_serializer=simple__pb2.Empty.SerializeToString,
       ),
-      'SumLong': grpc.unary_unary_rpc_method_handler(
-          servicer.SumLong,
+      'duplicate_function': grpc.unary_unary_rpc_method_handler(
+          servicer.duplicate_function,
           request_deserializer=simple__pb2.SumLongRequest.FromString,
           response_serializer=simple__pb2.SumLongResponse.SerializeToString,
       ),
-      'SumEightLongs': grpc.unary_unary_rpc_method_handler(
-          servicer.SumEightLongs,
+      'adder_function': grpc.unary_unary_rpc_method_handler(
+          servicer.adder_function,
           request_deserializer=simple__pb2.SumEightLongsRequest.FromString,
           response_serializer=simple__pb2.SumLongResponse.SerializeToString,
       ),
-      'StringReplace': grpc.unary_unary_rpc_method_handler(
-          servicer.StringReplace,
+      'maximizeString_function': grpc.unary_unary_rpc_method_handler(
+          servicer.maximizeString_function,
           request_deserializer=simple__pb2.StringRequest.FromString,
           response_serializer=simple__pb2.StringResponse.SerializeToString,
       ),
-      'ComplexObjectOperation': grpc.unary_unary_rpc_method_handler(
-          servicer.ComplexObjectOperation,
+      'criaPessoa': grpc.unary_unary_rpc_method_handler(
+          servicer.criaPessoa,
           request_deserializer=simple__pb2.PessoaEndereco.FromString,
           response_serializer=simple__pb2.PessoaResposta.SerializeToString,
       ),
-      'AddAddress': grpc.unary_unary_rpc_method_handler(
-          servicer.AddAddress,
+      'adicionaEndereco': grpc.unary_unary_rpc_method_handler(
+          servicer.adicionaEndereco,
           request_deserializer=simple__pb2.Endereco.FromString,
           response_serializer=simple__pb2.PessoaResposta.SerializeToString,
       ),

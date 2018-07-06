@@ -13,23 +13,23 @@ _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
 class Deliverer(simple_pb2_grpc.DelivererServicer):
 	
-	def VoidOnServer(self, request, context):
+	def void_function(self, request, context):
 		aux = 2 + 3
 		return simple_pb2.Empty()
 	
-	def SumLong(self, request, context):
-		aux = request.a + request.b
+	def duplicate_function(self, request, context):
+		aux = request.a * 2
 		return simple_pb2.SumLongResponse(result=aux)
 	
-	def SumEightLongs(self, request, context):
+	def adder_function(self, request, context):
 		aux = request.a + request.b + request.c + request.d + request.e + request.f + request.g + request.h 
 		return simple_pb2.SumLongResponse(result=aux)
 	
-	def StringReplace(self, request, context):
+	def maximizeString_function(self, request, context):
 		aux = request.a.upper()
 		return simple_pb2.StringResponse(result=aux)
 	
-	def ComplexObjectOperation(self, request, context):
+	def criaPessoa(self, request, context):
 		try:
 			path = './database.db'
 			conn = sqlite3.connect(path)
@@ -55,7 +55,7 @@ class Deliverer(simple_pb2_grpc.DelivererServicer):
 		resposta = simple_pb2.PessoaResposta(id_pessoa=id_pessoa, hora=hora.strftime("%Y-%m-%d %H:%M:%S"))
 		return resposta
 
-	def AddAddress(self, request, context):
+	def adicionaEndereco(self, request, context):
 		try:
 			path = './database.db'
 			conn = sqlite3.connect(path)
