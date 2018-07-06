@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='simple.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x0csimple.proto\"\x07\n\x05\x45mpty\"\x1b\n\x0eSumLongRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\"!\n\x0fSumLongResponse\x12\x0e\n\x06result\x18\x01 \x01(\x03\"n\n\x14SumEightLongsRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\x03\x12\t\n\x01\x64\x18\x04 \x01(\x03\x12\t\n\x01\x65\x18\x05 \x01(\x03\x12\t\n\x01\x66\x18\x06 \x01(\x03\x12\t\n\x01g\x18\x07 \x01(\x03\x12\t\n\x01h\x18\x08 \x01(\x03\"\x1a\n\rStringRequest\x12\t\n\x01\x61\x18\x01 \x01(\t\" \n\x0eStringResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"E\n\x0ePessoaEndereco\x12\x17\n\x06person\x18\x01 \x01(\x0b\x32\x07.Pessoa\x12\x1a\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32\t.Endereco\"7\n\x08\x45ndereco\x12\x0e\n\x06\x63idade\x18\x01 \x01(\t\x12\x0b\n\x03rua\x18\x02 \x01(\t\x12\x0e\n\x06numero\x18\x03 \x01(\x05\"%\n\x06Pessoa\x12\x0c\n\x04nome\x18\x01 \x01(\t\x12\r\n\x05idade\x18\x02 \x01(\x05\"1\n\x0ePessoaResposta\x12\x11\n\tid_pessoa\x18\x01 \x01(\x05\x12\x0c\n\x04hora\x18\x02 \x01(\t2\xc8\x02\n\tDeliverer\x12!\n\rvoid_function\x12\x06.Empty\x1a\x06.Empty\"\x00\x12\x39\n\x12\x64uplicate_function\x12\x0f.SumLongRequest\x1a\x10.SumLongResponse\"\x00\x12;\n\x0e\x61\x64\x64\x65r_function\x12\x15.SumEightLongsRequest\x1a\x10.SumLongResponse\"\x00\x12<\n\x17maximizeString_function\x12\x0e.StringRequest\x1a\x0f.StringResponse\"\x00\x12\x30\n\ncriaPessoa\x12\x0f.PessoaEndereco\x1a\x0f.PessoaResposta\"\x00\x12\x30\n\x10\x61\x64icionaEndereco\x12\t.Endereco\x1a\x0f.PessoaResposta\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0csimple.proto\"\x07\n\x05\x45mpty\"\x1b\n\x0eSumLongRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\"!\n\x0fSumLongResponse\x12\x0e\n\x06result\x18\x01 \x01(\x03\"n\n\x14SumEightLongsRequest\x12\t\n\x01\x61\x18\x01 \x01(\x03\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\x03\x12\t\n\x01\x64\x18\x04 \x01(\x03\x12\t\n\x01\x65\x18\x05 \x01(\x03\x12\t\n\x01\x66\x18\x06 \x01(\x03\x12\t\n\x01g\x18\x07 \x01(\x03\x12\t\n\x01h\x18\x08 \x01(\x03\"\x1a\n\rStringRequest\x12\t\n\x01\x61\x18\x01 \x01(\t\" \n\x0eStringResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"E\n\x0ePessoaEndereco\x12\x17\n\x06person\x18\x01 \x01(\x0b\x32\x07.Pessoa\x12\x1a\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32\t.Endereco\"7\n\x08\x45ndereco\x12\x0e\n\x06\x63idade\x18\x01 \x01(\t\x12\x0b\n\x03rua\x18\x02 \x01(\t\x12\x0e\n\x06numero\x18\x03 \x01(\x05\"%\n\x06Pessoa\x12\x0c\n\x04nome\x18\x01 \x01(\t\x12\r\n\x05idade\x18\x02 \x01(\x05\"1\n\x0ePessoaResposta\x12\x11\n\tid_pessoa\x18\x01 \x01(\x05\x12\x0c\n\x04hora\x18\x02 \x01(\t\"+\n\x10RetanguloRequest\x12\x17\n\x03ret\x18\x01 \x01(\x0b\x32\n.Retangulo\")\n\tRetangulo\x12\x0c\n\x04\x62\x61se\x18\x01 \x01(\x05\x12\x0e\n\x06\x61ltura\x18\x02 \x01(\x05\x32\x83\x03\n\tDeliverer\x12!\n\rvoid_function\x12\x06.Empty\x1a\x06.Empty\"\x00\x12\x39\n\x12\x64uplicate_function\x12\x0f.SumLongRequest\x1a\x10.SumLongResponse\"\x00\x12;\n\x0e\x61\x64\x64\x65r_function\x12\x15.SumEightLongsRequest\x1a\x10.SumLongResponse\"\x00\x12<\n\x17maximizeString_function\x12\x0e.StringRequest\x1a\x0f.StringResponse\"\x00\x12\x30\n\ncriaPessoa\x12\x0f.PessoaEndereco\x1a\x0f.PessoaResposta\"\x00\x12\x30\n\x10\x61\x64icionaEndereco\x12\t.Endereco\x1a\x0f.PessoaResposta\"\x00\x12\x39\n\x0f\x65sticaRetangulo\x12\x11.RetanguloRequest\x1a\x11.RetanguloRequest\"\x00\x62\x06proto3')
 )
 
 
@@ -411,8 +411,78 @@ _PESSOARESPOSTA = _descriptor.Descriptor(
   serialized_end=479,
 )
 
+
+_RETANGULOREQUEST = _descriptor.Descriptor(
+  name='RetanguloRequest',
+  full_name='RetanguloRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ret', full_name='RetanguloRequest.ret', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=481,
+  serialized_end=524,
+)
+
+
+_RETANGULO = _descriptor.Descriptor(
+  name='Retangulo',
+  full_name='Retangulo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='base', full_name='Retangulo.base', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='altura', full_name='Retangulo.altura', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=526,
+  serialized_end=567,
+)
+
 _PESSOAENDERECO.fields_by_name['person'].message_type = _PESSOA
 _PESSOAENDERECO.fields_by_name['address'].message_type = _ENDERECO
+_RETANGULOREQUEST.fields_by_name['ret'].message_type = _RETANGULO
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
 DESCRIPTOR.message_types_by_name['SumLongRequest'] = _SUMLONGREQUEST
 DESCRIPTOR.message_types_by_name['SumLongResponse'] = _SUMLONGRESPONSE
@@ -423,6 +493,8 @@ DESCRIPTOR.message_types_by_name['PessoaEndereco'] = _PESSOAENDERECO
 DESCRIPTOR.message_types_by_name['Endereco'] = _ENDERECO
 DESCRIPTOR.message_types_by_name['Pessoa'] = _PESSOA
 DESCRIPTOR.message_types_by_name['PessoaResposta'] = _PESSOARESPOSTA
+DESCRIPTOR.message_types_by_name['RetanguloRequest'] = _RETANGULOREQUEST
+DESCRIPTOR.message_types_by_name['Retangulo'] = _RETANGULO
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), dict(
@@ -495,6 +567,20 @@ PessoaResposta = _reflection.GeneratedProtocolMessageType('PessoaResposta', (_me
   ))
 _sym_db.RegisterMessage(PessoaResposta)
 
+RetanguloRequest = _reflection.GeneratedProtocolMessageType('RetanguloRequest', (_message.Message,), dict(
+  DESCRIPTOR = _RETANGULOREQUEST,
+  __module__ = 'simple_pb2'
+  # @@protoc_insertion_point(class_scope:RetanguloRequest)
+  ))
+_sym_db.RegisterMessage(RetanguloRequest)
+
+Retangulo = _reflection.GeneratedProtocolMessageType('Retangulo', (_message.Message,), dict(
+  DESCRIPTOR = _RETANGULO,
+  __module__ = 'simple_pb2'
+  # @@protoc_insertion_point(class_scope:Retangulo)
+  ))
+_sym_db.RegisterMessage(Retangulo)
+
 
 
 _DELIVERER = _descriptor.ServiceDescriptor(
@@ -503,8 +589,8 @@ _DELIVERER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=482,
-  serialized_end=810,
+  serialized_start=570,
+  serialized_end=957,
   methods=[
   _descriptor.MethodDescriptor(
     name='void_function',
@@ -558,6 +644,15 @@ _DELIVERER = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_ENDERECO,
     output_type=_PESSOARESPOSTA,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='esticaRetangulo',
+    full_name='Deliverer.esticaRetangulo',
+    index=6,
+    containing_service=None,
+    input_type=_RETANGULOREQUEST,
+    output_type=_RETANGULOREQUEST,
     options=None,
   ),
 ])

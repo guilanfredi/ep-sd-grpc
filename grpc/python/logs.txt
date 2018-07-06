@@ -6,7 +6,7 @@ Tempo de execucao: 1 ms
 Metodo: Duplica um long
 Parametros: 922337203685477633
 Resultado: 1844674407370955266
-Tempo de execucao: 2 ms
+Tempo de execucao: 1 ms
 
 Metodo: Soma oito longs
 Parametros: 922337203685477633, 922337203685477634, 922337203685477635, 922337203685477636, 922337203685477637, 922337203685477638, 922337203685477639, 922337203685477640
@@ -16,7 +16,7 @@ Tempo de execucao: 0 ms
 Metodo: String to uppercase
 Parametros: 'a' Tamanho: 1
 Resultado: 'A' Tamanho: 1
-Tempo de execucao: 0 ms
+Tempo de execucao: 1 ms
 
 Metodo: String to uppercase
 Parametros: 'aa' Tamanho: 2
@@ -26,7 +26,7 @@ Tempo de execucao: 1 ms
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 4
 Resultado: 'AA...' Tamanho: 4
-Tempo de execucao: 1 ms
+Tempo de execucao: 0 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 8
@@ -41,26 +41,31 @@ Tempo de execucao: 1 ms
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 32
 Resultado: 'AA...' Tamanho: 32
-Tempo de execucao: 1 ms
+Tempo de execucao: 0 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 64
 Resultado: 'AA...' Tamanho: 64
-Tempo de execucao: 0 ms
+Tempo de execucao: 1 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 128
 Resultado: 'AA...' Tamanho: 128
-Tempo de execucao: 1 ms
+Tempo de execucao: 0 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 256
 Resultado: 'AA...' Tamanho: 256
-Tempo de execucao: 0 ms
+Tempo de execucao: 1 ms
 
 Metodo: String to uppercase
 Parametros: 'aa...' Tamanho: 512
 Resultado: 'AA...' Tamanho: 512
+Tempo de execucao: 1 ms
+
+Metodo: String to uppercase
+Parametros: 'aa...' Tamanho: 1024
+Resultado: 'AA...' Tamanho: 1024
 Tempo de execucao: 0 ms
 
 Metodo: Inserir pessoa (objeto) no banco de dados
@@ -69,8 +74,8 @@ nome: "Guilherme"
 idade: 23
 
 Resultado: 
-id_pessoa: 4
-hora: "2018-07-04 23:59:40"
+id_pessoa: 6
+hora: "2018-07-05 21:53:13"
 
 Tempo de execucao: 13 ms
 
@@ -82,7 +87,20 @@ numero: 121
 
 Resultado: 
 id_pessoa: 1
-hora: "2018-07-04 23:59:40"
+hora: "2018-07-05 21:53:13"
 
-Tempo de execucao: 8 ms
+Tempo de execucao: 10 ms
+
+Metodo: Esticar retangulo (objeto)
+Parametros: ret {
+  base: 15
+  altura: 10
+}
+
+Resultado: ret {
+  base: 30
+  altura: 10
+}
+
+Tempo de execucao: 1 ms
 

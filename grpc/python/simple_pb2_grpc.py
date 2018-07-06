@@ -44,6 +44,11 @@ class DelivererStub(object):
         request_serializer=simple__pb2.Endereco.SerializeToString,
         response_deserializer=simple__pb2.PessoaResposta.FromString,
         )
+    self.esticaRetangulo = channel.unary_unary(
+        '/Deliverer/esticaRetangulo',
+        request_serializer=simple__pb2.RetanguloRequest.SerializeToString,
+        response_deserializer=simple__pb2.RetanguloRequest.FromString,
+        )
 
 
 class DelivererServicer(object):
@@ -96,6 +101,13 @@ class DelivererServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def esticaRetangulo(self, request, context):
+    """Passa um retângulo e retorna outro retângulo com o dobro de area
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_DelivererServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -128,6 +140,11 @@ def add_DelivererServicer_to_server(servicer, server):
           servicer.adicionaEndereco,
           request_deserializer=simple__pb2.Endereco.FromString,
           response_serializer=simple__pb2.PessoaResposta.SerializeToString,
+      ),
+      'esticaRetangulo': grpc.unary_unary_rpc_method_handler(
+          servicer.esticaRetangulo,
+          request_deserializer=simple__pb2.RetanguloRequest.FromString,
+          response_serializer=simple__pb2.RetanguloRequest.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

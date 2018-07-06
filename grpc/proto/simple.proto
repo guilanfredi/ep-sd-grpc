@@ -23,6 +23,9 @@ service Deliverer {
 
 	// Insere um endereço no banco de dados e retorna seu id e uma data
 	rpc adicionaEndereco(Endereco) returns (PessoaResposta){}
+
+	// Passa um retângulo e retorna outro retângulo com o dobro de area
+	rpc esticaRetangulo(RetanguloRequest) returns (RetanguloRequest){}
 }
 
 message Empty{}
@@ -73,4 +76,13 @@ message Pessoa{
 message PessoaResposta{
 	int32 id_pessoa = 1;
 	string hora = 2;
+}
+
+message RetanguloRequest{
+	Retangulo ret = 1;
+}
+
+message Retangulo{
+	int32 base = 1;
+	int32 altura = 2;
 }

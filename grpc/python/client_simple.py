@@ -105,6 +105,15 @@ def run():
 	logs.write("Resultado: \n{}\n".format(resultado))
 	logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 
+	# Estica o retangulo
+	retangulo = simple_pb2.Retangulo(base=15, altura=10)
+	start_time = time.time() * 1000
+	resultado = stub.esticaRetangulo(simple_pb2.RetanguloRequest(ret=retangulo))
+	end_time = time.time() * 1000
+	logs.write("Metodo: Esticar retangulo (objeto)\n")
+	logs.write("Parametros: \n{}\n".format(simple_pb2.RetanguloRequest(ret=retangulo)))
+	logs.write("Resultado: \n{}\n".format(resultado))
+	logs.write("Tempo de execucao: {} ms\n\n".format(math.floor(end_time - start_time)))
 
 	logs.close()
 

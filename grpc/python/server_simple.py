@@ -73,6 +73,10 @@ class Deliverer(simple_pb2_grpc.DelivererServicer):
 		resposta = simple_pb2.PessoaResposta(id_pessoa=id_pessoa, hora=hora.strftime("%Y-%m-%d %H:%M:%S"))
 		return resposta
 
+	def esticaRetangulo(self, request, context):
+		retangulo = simple_pb2.Retangulo(base=request.ret.base * 2, altura = request.ret.altura)
+		return simple_pb2.RetanguloRequest(ret=retangulo)
+
 
 def serve():
 	server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
