@@ -65,7 +65,7 @@ def run():
 
 	firstString = "a"
 	i = 0
-	while(i < 10):
+	while(i <= 10):
 		
 		start_time = time.time() * 1000
 		response = stub.maximizeString_function(simple_pb2.StringRequest(a=firstString))
