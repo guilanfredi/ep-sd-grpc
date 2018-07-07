@@ -9,8 +9,6 @@ import grpc
 import simple_pb2
 import simple_pb2_grpc
 
-from objetos import Pessoa, Endereco
-
 def run():
 	
 	channel = grpc.insecure_channel('localhost:50051')
