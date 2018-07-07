@@ -11,8 +11,11 @@ import sqlite3
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
+# Servidor deve implementar a classe Servicer gerada pelo gRPC
 class Deliverer(simple_pb2_grpc.DelivererServicer):
 	
+
+	# Definição dos métodos
 	def void_function(self, request, context):
 		aux = 2 + 3
 		return simple_pb2.Empty()
@@ -79,6 +82,7 @@ class Deliverer(simple_pb2_grpc.DelivererServicer):
 
 
 def serve():
+	# Iniciando servidor
 	server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
 	simple_pb2_grpc.add_DelivererServicer_to_server(Deliverer(), server)
 	server.add_insecure_port('[::]:50051')
