@@ -6,7 +6,7 @@ Este repositório contém implementações das mesmas chamadas de procedimento r
 ## Antes de começar
 
 ### Pré requisitos
-O gRPC em Python é suportado pelas versões Python 2.7 ou 3.4 ou mais recente.
+Para execução destes programas, você precisará da versão 3.4 ou maior do Python.
 
 Verifique se você tem o `pip` na versão 9.0.1 ou maior:
 
